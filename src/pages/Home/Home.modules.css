@@ -1,0 +1,83 @@
+.menu {
+  background-color: black;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  max-width: 100vw;
+}
+.menu .Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../images/BackgroundHome.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.menu .Home h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5vh;
+  color: white;
+  font-size: 4rem;
+}
+.menu .Home h1 span {
+  color: rgba(243, 243, 243, 0.107);
+  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.696);
+  text-stroke: 3px rgba(255, 255, 255, 0.696);
+}
+.menu .Home a {
+  color: rgba(0, 0, 0, 0.689);
+  font-weight: bold;
+  font-size: large;
+  text-decoration: none;
+  padding: 2vh 4vw;
+  background-color: rgb(255, 196, 0);
+  box-shadow: 1px 1px 14px -2px #000000;
+}
+.menu #empresa {
+  height: 40vh;
+  padding: 5vh 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu #empresa .titulo p {
+  color: rgb(255, 196, 0);
+  font-weight: bolder;
+  padding: 2% 0px;
+}
+.menu #empresa .titulo h2 {
+  font-size: 3em;
+  font-weight: bolder;
+}
+.menu #empresa .frase {
+  width: 40vw;
+  font-size: 1.3rem;
+  color: #c0c0c0;
+}
+.menu #equipe {
+  background-color: #0c0c0c;
+  height: 100vh;
+  padding: 10vh 15vw;
+  display: flex;
+  justify-content: space-between;
+}
+.menu #equipe .titulo p {
+  color: rgb(255, 196, 0);
+  font-weight: bolder;
+  padding: 2% 0px;
+}
+.menu #equipe .titulo h2 {
+  font-size: 3em;
+  font-weight: bolder;
+}
+.menu #equipe .frase {
+  width: 40vw;
+  font-size: 1.3rem;
+  color: #c0c0c0;
+}/*# sourceMappingURL=Home.modules.css.map */
