@@ -1,6 +1,4 @@
-@function background($background){
-  @return $background;
-}
+
 .menu{
 background-color: black;
 padding: 0px;
@@ -217,7 +215,6 @@ max-width: 100vw;
       }
       transition: 0.5s ease-in-out;
       &:hover{
-        background-image: url(background);
         transform: scale(1.1);
       }
     }

@@ -207,7 +207,6 @@
   width: 10vw;
 }
 .menu .diferenciais .cards .card:hover {
-  background-image: url(background);
   transform: scale(1.1);
 }
 .menu #blog {
