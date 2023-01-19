@@ -1,6 +1,6 @@
 import { BsTelephone } from "react-icons/bs";
-import { SiGooglemaps } from "react-icons/Si";
-import { AiOutlineMail } from "react-icons/Ai";
+import { SiGooglemaps } from "react-icons/si";
+import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineInstagram,AiOutlineFacebook,AiOutlineYoutube  } from 'react-icons/ai';
 import './footer.modules.css'
 export default function Footer(){
