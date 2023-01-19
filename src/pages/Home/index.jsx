@@ -45,7 +45,7 @@ return( //Começa a renderizar o HTML
       <p>Equipe</p>
       <h2>Nossos <br/> Advogados</h2>
     </div>
-    <div className="cards" style={{"transform": `translateX(${carrossel2}px)`}}>
+    <div className="cards" style={{"transform": `translateX(${carrossel2}px)`,"transition":"0.5s"}}>
       <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
       <h4>Nome do Advogado</h4>
       <p>Area de Atuação</p>
@@ -77,7 +77,7 @@ return( //Começa a renderizar o HTML
       <p>SERVIÇOS</p>
       <h2>ÁREAS <br/> DE ATUAÇÃO</h2>
     </div>
-    <div className="cards" style={{"transform": `translateX(${carrossel}px)`}}>
+    <div className="cards" style={{"transform": `translateX(${carrossel}px)`,"transition":"0.5s"}}>
       <div className="card">
       <HiOutlineBuildingOffice2 id='icon' style={{"color":"rgb(255, 196, 0)"}}/>
       <h4>EMPRESARIAL</h4>
@@ -116,7 +116,7 @@ return( //Começa a renderizar o HTML
       </div>
     </div>
     <div className="buttons">
-    <button onClick={()=>setCarrossel(carrossel+(carrossel<0?200:0))} style={carrossel==0?{"backgroundColor":"gray "}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
+    <button onClick={()=>setCarrossel(carrossel+(carrossel<0?200:0))} style={carrossel==0?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
     <button onClick={()=>setCarrossel(carrossel-(carrossel>-1000?200:0))} style={carrossel==-1000?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
     </div>
   </div>
