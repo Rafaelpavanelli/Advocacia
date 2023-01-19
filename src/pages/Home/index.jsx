@@ -164,7 +164,7 @@ return( //Começa a renderizar o HTML
       <h2>NOTÍCIAS<br/> E ARTIGOS</h2>
     </div>
     </div>
-    <div className="noticias" style={{"height": `${overflow}`}}>
+    <div className="noticias" style={{"height": `${overflow}`,"transition":"height 0.5s ease-in-out"}}>
     <div className="card">
       <img src={advogada1} alt=""/>
       <p id='data'>00/00/00</p>

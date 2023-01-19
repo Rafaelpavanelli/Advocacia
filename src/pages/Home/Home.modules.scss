@@ -370,11 +370,13 @@ overflow: hidden;
       margin: 2vh;
       padding: 2vh;
       color: white;
+      border: none;
+      border-bottom:1px solid rgb(255, 196, 0)  ;
     }
     #mensagem{
       width: 68vw;
       height: 20vh;
-      padding: 0px 0px 0px 5vh;
+      padding: 0px 0px 5vh 2vh;
 
     }
     button{
