@@ -62,22 +62,241 @@
 }
 .menu #equipe {
   background-color: #0c0c0c;
-  height: 100vh;
-  padding: 10vh 15vw;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
-.menu #equipe .titulo p {
+.menu #equipe .sobre {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vh 15vw 0px;
+}
+.menu #equipe .sobre .titulo p {
   color: rgb(255, 196, 0);
   font-weight: bolder;
   padding: 2% 0px;
 }
-.menu #equipe .titulo h2 {
+.menu #equipe .sobre .titulo h2 {
   font-size: 3em;
   font-weight: bolder;
 }
-.menu #equipe .frase {
+.menu #equipe .sobre .frase {
   width: 40vw;
   font-size: 1.3rem;
   color: #c0c0c0;
+}
+.menu #equipe .cards {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.menu #equipe .cards .card {
+  margin: 5vh 5vw;
+  height: 20vh;
+  height: 10vw;
+  overflow: hidden;
+}
+.menu #equipe .cards .card img {
+  width: 100%;
+  height: 100%;
+}
+.menu #area {
+  height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+}
+.menu #area p {
+  text-align: center;
+  color: rgb(255, 196, 0);
+}
+.menu #area h2 {
+  text-align: center;
+  font-size: 3em;
+}
+.menu #area .cards {
+  margin: 10vh 0px;
+  display: flex;
+}
+.menu #area .cards .card {
+  padding: 3vh 5vh 1vh 5vh;
+  margin-right: 5vh;
+  background-color: rgb(28, 28, 28);
+  width: 15vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+.menu #area .cards .card h4 {
+  text-align: center;
+}
+.menu #area .cards .card p {
+  text-align: center;
+  color: white;
+  padding-top: 1vh;
+}
+.menu #area .cards .card #icon {
+  color: white;
+  font-size: 4em;
+  background-image: none;
+  margin-bottom: 1vh;
+}
+.menu #area .cards .card:hover {
+  background: white;
+}
+.menu #area .cards .card:hover #icon {
+  color: rgb(255, 196, 0);
+}
+.menu #area .cards .card:hover p, .menu #area .cards .card:hover h4 {
+  color: black;
+}
+.menu .diferenciais {
+  flex-direction: column;
+  display: flex;
+  padding: 2vh 15vw 0px;
+  max-width: 100vw;
+  height: 100vh;
+  background: rgb(255, 196, 0);
+}
+.menu .diferenciais #head {
+  padding: 5vh 0px 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+.menu .diferenciais #head .titulo p {
+  color: white;
+  font-weight: bolder;
+}
+.menu .diferenciais #head .titulo h2 {
+  color: black;
+  font-size: 3em;
+  font-weight: bolder;
+}
+.menu .diferenciais #head .frase {
+  width: 40vw;
+  font-size: 1.2rem;
+  color: black;
+}
+.menu .diferenciais .cards {
+  display: flex;
+}
+.menu .diferenciais .cards .card {
+  margin-right: 3vh;
+  background-color: #1a1a1a;
+  width: 50vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 4vh 2vh 20vh;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right, left;
+  transition: 0.5s ease-in-out;
+}
+.menu .diferenciais .cards .card h5 {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgb(255, 196, 0);
+}
+.menu .diferenciais .cards .card p {
+  width: 10vw;
+}
+.menu .diferenciais .cards .card:hover {
+  background-image: url(background);
+  transform: scale(1.1);
+}
+.menu #blog {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vh 10vw 5vh;
+  flex-direction: column;
+}
+.menu #blog .titulo p {
+  color: rgb(255, 196, 0);
+  font-weight: bolder;
+  padding: 2% 0px;
+}
+.menu #blog .titulo h2 {
+  font-size: 3em;
+  font-weight: bolder;
+}
+.menu #blog .frase {
+  width: 40vw;
+  font-size: 1.3rem;
+  color: #c0c0c0;
+}
+.menu #blog .noticias {
+  display: inline-block;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+.menu #blog .noticias .card {
+  margin: 5vh;
+  background-color: black;
+  width: 20vw;
+}
+.menu #blog .noticias .card #data {
+  color: rgb(255, 196, 0);
+}
+.menu #blog .noticias .card p {
+  color: white;
+  padding-top: 2vh;
+}
+.menu #blog button {
+  width: 20vw;
+  margin: auto;
+  background-color: rgb(255, 196, 0);
+  color: white;
+  height: 5vh;
+}
+.menu .contato {
+  background: #1a1a1a;
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto;
+}
+.menu .contato h2 {
+  font-size: 3em;
+  margin: 0px 0px 3vh;
+}
+.menu .contato p {
+  color: rgb(255, 196, 0);
+}
+.menu .contato .email {
+  width: 70vw;
+}
+.menu .contato .email input {
+  width: 21vw;
+  height: 5vh;
+  background-color: #0c0c0c;
+  margin: 2vh;
+  padding: 2vh;
+  color: white;
+}
+.menu .contato .email #mensagem {
+  width: 68vw;
+  height: 20vh;
+  padding: 0px;
+}
+.menu .contato .email button {
+  background: rgb(255, 196, 0);
+  padding: 1vh 2vw;
+  margin-bottom: 20vh;
+  transition: 0.2s ease-in-out;
+}
+.menu .contato .email button:hover {
+  color: white;
 }/*# sourceMappingURL=Home.modules.css.map */
