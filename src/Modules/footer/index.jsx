@@ -1,4 +1,4 @@
-import { BsTelephone } from "react-icons/Bs";
+import { BsTelephone } from "react-icons/bs";
 import { SiGooglemaps } from "react-icons/Si";
 import { AiOutlineMail } from "react-icons/Ai";
 import { AiOutlineInstagram,AiOutlineFacebook,AiOutlineYoutube  } from 'react-icons/ai';
