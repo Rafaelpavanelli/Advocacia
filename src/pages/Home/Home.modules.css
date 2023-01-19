@@ -4,6 +4,7 @@
   margin: 0px;
   color: white;
   max-width: 100vw;
+  overflow: hidden;
 }
 .menu .Home {
   display: flex;
@@ -61,52 +62,92 @@
   color: #c0c0c0;
 }
 .menu #equipe {
-  background-color: #0c0c0c;
+  max-width: 70vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  overflow: hidden;
+  transform: translateX(0px);
 }
-.menu #equipe .sobre {
-  display: flex;
-  justify-content: space-between;
-  padding: 10vh 15vw 0px;
-}
-.menu #equipe .sobre .titulo p {
+.menu #equipe p {
+  text-align: center;
   color: rgb(255, 196, 0);
-  font-weight: bolder;
-  padding: 2% 0px;
 }
-.menu #equipe .sobre .titulo h2 {
+.menu #equipe h2 {
+  text-align: center;
   font-size: 3em;
-  font-weight: bolder;
-}
-.menu #equipe .sobre .frase {
-  width: 40vw;
-  font-size: 1.3rem;
-  color: #c0c0c0;
 }
 .menu #equipe .cards {
-  justify-content: center;
-  align-items: center;
+  margin: 10vh 0px 10vh auto;
   display: flex;
+  justify-content: start;
 }
 .menu #equipe .cards .card {
-  margin: 5vh 5vw;
-  height: 20vh;
-  height: 10vw;
-  overflow: hidden;
+  padding: 3vh 5vh 1vh 5vh;
+  margin-right: 5vh;
+  background-color: rgb(28, 28, 28);
+  width: 15vw;
+  height: 50vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
 }
-.menu #equipe .cards .card img {
-  width: 100%;
-  height: 100%;
+.menu #equipe .cards .card h4 {
+  transition: 0.5s ease-in-out;
+  text-align: left;
+  color: transparent;
+}
+.menu #equipe .cards .card p {
+  transition: 0.5s ease-in-out;
+  text-align: center;
+  color: transparent;
+  padding-top: 1vh;
+}
+.menu #equipe .cards .card #icon {
+  color: white;
+  font-size: 4em;
+  background-image: none;
+  margin-bottom: 1vh;
+}
+.menu #equipe .cards .card:hover #icon {
+  color: rgb(255, 196, 0);
+}
+.menu #equipe .cards .card:hover p, .menu #equipe .cards .card:hover h4 {
+  transition: color 0.5s ease-in-out;
+  color: rgb(255, 238, 0);
+}
+.menu #equipe .buttons {
+  margin-left: 100vh;
+}
+.menu #equipe .buttons button {
+  margin: 0px 1vh;
+  background-color: rgb(255, 196, 0);
+  padding: 2vh 2vh;
+  font-size: 1.2em;
+  color: white;
+  transition: background-color 0.4s ease-in-out;
+}
+.menu #equipe .buttons button:hover {
+  background-color: rgb(251, 216, 102);
 }
 .menu #area {
-  height: 100vh;
-  max-width: 100vw;
+  max-width: 70vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   padding-top: 10vh;
+  padding-bottom: 10vh;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+  transform: translateX(0px);
 }
 .menu #area p {
   text-align: center;
@@ -117,8 +158,9 @@
   font-size: 3em;
 }
 .menu #area .cards {
-  margin: 10vh 0px;
+  margin: 10vh 0px 10vh auto;
   display: flex;
+  justify-content: start;
 }
 .menu #area .cards .card {
   padding: 3vh 5vh 1vh 5vh;
@@ -154,6 +196,20 @@
 .menu #area .cards .card:hover p, .menu #area .cards .card:hover h4 {
   color: black;
 }
+.menu #area .buttons {
+  margin-left: 100vh;
+}
+.menu #area .buttons button {
+  margin: 0px 1vh;
+  background-color: rgb(255, 196, 0);
+  padding: 2vh 2vh;
+  font-size: 1.2em;
+  color: white;
+  transition: background-color 0.4s ease-in-out;
+}
+.menu #area .buttons button:hover {
+  background-color: rgb(251, 216, 102);
+}
 .menu .diferenciais {
   flex-direction: column;
   display: flex;
@@ -185,18 +241,26 @@
   display: flex;
 }
 .menu .diferenciais .cards .card {
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
   margin-right: 3vh;
   background-color: #1a1a1a;
   width: 50vw;
   color: white;
   display: flex;
   flex-direction: column;
-  padding: 4vh 2vh 20vh;
+  padding: 4vh 2vh 10vh;
   justify-content: space-between;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right, left;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: right, top;
   transition: 0.5s ease-in-out;
+}
+.menu .diferenciais .cards .card img {
+  min-width: 12vh;
+  max-width: 13vh;
+  margin-left: 8vh;
 }
 .menu .diferenciais .cards .card h5 {
   font-weight: bold;
@@ -288,7 +352,7 @@
 .menu .contato .email #mensagem {
   width: 68vw;
   height: 20vh;
-  padding: 0px;
+  padding: 0px 0px 0px 5vh;
 }
 .menu .contato .email button {
   background: rgb(255, 196, 0);

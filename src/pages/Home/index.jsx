@@ -1,19 +1,30 @@
 import './Home.modules.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Advocacia from './../../icons/advocacia.ico';
+import Suporte from './../../icons/homemidea.ico';
+import Profissoes from './../../icons/HomemEstrela.ico';
+import Tv from './../../icons/Tvgrafico.ico';
+import planta from './../../icons/Planta.ico';
+import clip from  './../../icons/clip-removebg-preview.png'
+import Ring from './../../icons/Separação.ico';
 import { useState } from 'react';
 import advogada1 from '../../images/advogada1.jpg'
 import advogada2 from '../../images/advogada2.webp'
-import advogada3 from '../../images/advogado3.jpg'
-import clipbord from '../../icons/clip.ico'
+import advogada3 from '../../images/advogado3.jpg';
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
+import { AiOutlineArrowRight,AiOutlineArrowLeft } from "react-icons/ai";
 //Acaba as importações
+
 export default function Home(){
   function ver(){ //Função para abrir e fechar as noticias
     overflow!="80vh"?setOverflow("80vh"):setOverflow("auto")
     overflow!="80vh"?setMostrar("Ver mais"):setMostrar("Ver menos")
   }
+  const img=[advogada1,advogada2,advogada3];
   const[mostrar,setMostrar]=useState("Ver mais")
   const[overflow,setOverflow]=useState("80vh")
+  const[carrossel,setCarrossel]=useState(0)
+  const[carrossel2,setCarrossel2]=useState(0)
 return( //Começa a renderizar o HTML
   <div className="menu" id='home'>
   <div className="Home">
@@ -30,22 +41,35 @@ return( //Começa a renderizar o HTML
         e personalizada para as suas necessidades.</p></div>
   </div>
   <div id="equipe">
-  <div className='sobre'>
-  <div className='titulo'>
-      <p>EQUIPE</p>
-      <h2>NOSSOS <br/>ADVOGADOS</h2>
+  <div className="titulo">
+      <p>Equipe</p>
+      <h2>Nossos <br/> Advogados</h2>
     </div>
-    <div className='frase'>
-      <p>Resolver seus problemas ja existentes e evitar que novos problemas surjam, de forma responsavel,consciente
-        e personalizada para as suas necessidades.</p></div>
-        </div>
-        <div className="cards">
-    <div className="card">
-      <img src={advogada1} alt="" />
-      <div className="boxtext">
-        <h3>Julia</h3>
-      <p>Advogada Literaria</p></div>
+    <div className="cards" style={{"transform": `translateX(${carrossel2}px)`}}>
+      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
+      <h4>Nome do Advogado</h4>
+      <p>Area de Atuação</p>
+      </div>
+      <div className="card" style={{"backgroundImage": `url(${advogada2})`}}>
+      <h4>Nome do Advogado</h4>
+      <p>Area de Atuação</p>
+      </div>
+      <div className="card" style={{"backgroundImage": `url(${advogada3})`}}>
+      <h4>Nome do Advogado</h4>
+      <p>Area de Atuação</p>
+      </div>
+      <div className="card" style={{"backgroundImage": `url(${advogada2})`}}>
+      <h4>Nome do Advogado</h4>
+      <p>Area de Atuação</p>
+      </div>
+      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
+      <h4>Nome do Advogado</h4>
+      <p>Area de Atuação</p>
+      </div>
     </div>
+    <div className="buttons">
+    <button onClick={()=>setCarrossel2(carrossel2+(carrossel2<0?200:0))} style={carrossel2==0?{"backgroundColor":"gray "}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
+    <button onClick={()=>setCarrossel2(carrossel2-(carrossel2>-1000?200:0))} style={carrossel2==-1000?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
   </div>
   </div>
   <div id="area">
@@ -53,16 +77,31 @@ return( //Começa a renderizar o HTML
       <p>SERVIÇOS</p>
       <h2>ÁREAS <br/> DE ATUAÇÃO</h2>
     </div>
-    <div className="cards">
+    <div className="cards" style={{"transform": `translateX(${carrossel}px)`}}>
       <div className="card">
-      <HiOutlineBuildingOffice2 id='icon'/>
+      <HiOutlineBuildingOffice2 id='icon' style={{"color":"rgb(255, 196, 0)"}}/>
       <h4>EMPRESARIAL</h4>
       <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
       </div>
       <div className="card">
-      <HiOutlineBuildingOffice2 id='icon'/>
+      <img src={Ring} alt="" />
       <h4 style={{"fontSize": "0.8em"}}>SOLUÇÃO EXTRAJUDICIAL DE CONFLITOS
-</h4>
+      </h4>
+      <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
+      </div>
+      <div className="card">
+      <img src={Advocacia} alt="" />
+      <h4>EMPRESARIAL</h4>
+      <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
+      </div>
+      <div className="card">
+      <img src={planta} alt="" />
+      <h4>EMPRESARIAL</h4>
+      <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
+      </div>
+      <div className="card">
+      <HiOutlineBuildingOffice2 id='icon'/>
+      <h4>EMPRESARIAL</h4>
       <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
       </div>
       <div className="card">
@@ -75,6 +114,10 @@ return( //Começa a renderizar o HTML
       <h4>EMPRESARIAL</h4>
       <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
       </div>
+    </div>
+    <div className="buttons">
+    <button onClick={()=>setCarrossel(carrossel+(carrossel<0?200:0))} style={carrossel==0?{"backgroundColor":"gray "}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
+    <button onClick={()=>setCarrossel(carrossel-(carrossel>-1000?200:0))} style={carrossel==-1000?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
     </div>
   </div>
   <div className="diferenciais">
@@ -88,26 +131,26 @@ return( //Começa a renderizar o HTML
     </div>
     </div>
     <div className="cards">
-    <div className="card" style={{}}>
-    <h1>Icon</h1>
+    <div className="card">
+    <img src={clip }alt=""/>
     <h5>SERVIÇO <br/>PERSONALIZADO <br/> E DIFERENCIADO </h5>
     <p>adequamos nossa prestação de serviços às suas necessidades.
 </p>
     </div>
     <div className="card">
-    <h1>Icon</h1>
+    <img src={Suporte }alt="" style={{"width":"20vh","padding": "0vh 1vh"}}/>
+    <h5>SERVIÇO <br/>PERSONALIZADO <br/> E DIFERENCIADO </h5>
+    <p>adequamos nossa prestação de serviços às suas necessidades.
+</p>
+    </div>
+    <div className="card" >
+    <img src={Tv}alt=""/>
     <h5>SERVIÇO <br/>PERSONALIZADO <br/> E DIFERENCIADO </h5>
     <p>adequamos nossa prestação de serviços às suas necessidades.
 </p>
     </div>
     <div className="card">
-    <h1>Icon</h1>
-    <h5>SERVIÇO <br/>PERSONALIZADO <br/> E DIFERENCIADO </h5>
-    <p>adequamos nossa prestação de serviços às suas necessidades.
-</p>
-    </div>
-    <div className="card">
-    <h1>Icon</h1>
+    <img src={Profissoes} alt="" />
     <h5>SERVIÇO <br/>PERSONALIZADO <br/> E DIFERENCIADO </h5>
     <p>adequamos nossa prestação de serviços às suas necessidades.
 </p>
