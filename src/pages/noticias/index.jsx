@@ -1,13 +1,14 @@
 import './noticias.modules.css'
 import {BsCalendar3} from 'react-icons/bs'
 import Advogado from './../../images/advogado3.jpg'
+import { NavLink } from 'react-router-dom'
 export default function Noticias(){
   return(
     <div className="noticias">
     <header>
         <p>BLOG</p>
         <h1>ARTIGOS<br/> E NOTICIAS</h1>
-        <div><a href="/">HOME</a> |<span>NOME DO ARTIGO</span></div>
+        <div><NavLink to={"/"}>HOME </NavLink>|<span>NOME DO ARTIGO</span></div>
       </header>
       <div className="description">
         <div className="noticia">

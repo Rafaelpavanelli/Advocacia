@@ -13,6 +13,7 @@ import advogada2 from '../../images/advogada2.webp'
 import advogada3 from '../../images/advogado3.jpg';
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { AiOutlineArrowRight,AiOutlineArrowLeft } from "react-icons/ai";
+import { NavLink } from 'react-router-dom';
 //Acaba as importações
 
 export default function Home(){
@@ -38,7 +39,8 @@ return( //Começa a renderizar o HTML
     </div>
     <div className='frase'>
       <p>Resolver seus problemas ja existentes e evitar que novos problemas surjam, de forma responsavel,consciente
-        e personalizada para as suas necessidades.</p></div>
+        e personalizada para as suas necessidades.</p>
+        </div>
   </div>
   <div id="equipe">
   <div className="titulo">
@@ -46,36 +48,31 @@ return( //Começa a renderizar o HTML
       <h2>Nossos <br/> Advogados</h2>
     </div>
     <div className="cards" style={{"transform": `translateX(${carrossel2}px)`,"transition":"0.5s"}}>
-      <a href="/advogados">
+      <NavLink to={"/advogados"} >
       <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
       <h4>Nome do Advogado</h4>
       <p>Area de Atuação</p>
       </div>
-      </a>
-      <a href="/advogados">
+      </NavLink>
+      <NavLink to={"/advogados"} >
       <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
       <h4>Nome do Advogado</h4>
       <p>Area de Atuação</p>
       </div>
-      </a>
-      <a href="/advogados">
+      </NavLink>
+      <NavLink to={"/advogados"} >
       <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
       <h4>Nome do Advogado</h4>
       <p>Area de Atuação</p>
       </div>
-      </a>
-      <a href="/advogados">
-      <div className="card" style={{"backgroundImage": `url(${advogada3})`}}>
+      </NavLink>
+      <NavLink to={"/advogados"} >
+      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
       <h4>Nome do Advogado</h4>
       <p>Area de Atuação</p>
       </div>
-      </a>
-      <a href="/advogados">
-      <div className="card" style={{"backgroundImage": `url(${advogada2})`}}>
-      <h4>Nome do Advogado</h4>
-      <p>Area de Atuação</p>
-      </div>
-      </a>
+      </NavLink>
+    
     </div>
     <div className="buttons">
     <button onClick={()=>setCarrossel2(carrossel2+(carrossel2<0?200:0))} style={carrossel2==0?{"backgroundColor":"gray "}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
@@ -175,7 +172,7 @@ return( //Começa a renderizar o HTML
     </div>
     </div>
     <div className="noticias" style={{"height": `${overflow}`,"transition":"height 0.5s ease-in-out"}}>
-      <a href="/noticias" style={{textDecoration: "none",color:"white"}}>
+      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
     <div className="card">
       <img src={advogada1} alt=""/>
       <p id='data'>00/00/00</p>
@@ -184,8 +181,8 @@ return( //Começa a renderizar o HTML
          Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
          </p>
       </div>
-      </a>
-      <a href="/noticias" style={{textDecoration: "none",color:"white"}}>
+      </NavLink>
+      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
     <div className="card">
       <img src={advogada1} alt=""/>
       <p id='data'>00/00/00</p>
@@ -194,8 +191,8 @@ return( //Começa a renderizar o HTML
          Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
          </p>
       </div>
-      </a>
-      <a href="/noticias" style={{textDecoration: "none",color:"white"}}>
+      </NavLink>
+      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
     <div className="card">
       <img src={advogada1} alt=""/>
       <p id='data'>00/00/00</p>
@@ -204,8 +201,8 @@ return( //Começa a renderizar o HTML
          Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
          </p>
       </div>
-      </a>
-      <a href="/noticias" style={{textDecoration: "none",color:"white"}}>
+      </NavLink>
+      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
     <div className="card">
       <img src={advogada1} alt=""/>
       <p id='data'>00/00/00</p>
@@ -214,8 +211,19 @@ return( //Começa a renderizar o HTML
          Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
          </p>
       </div>
-      </a>
-    </div>
+      </NavLink>
+      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
+    <div className="card">
+      <img src={advogada1} alt=""/>
+      <p id='data'>00/00/00</p>
+      <h3>A SEPARAÇÃO DA SEPARAÇÃO</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab culpa saepe suscipit obcaecati fugit magni eum soluta quo voluptatibus?
+         Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
+         </p>
+      </div>
+      </NavLink>
+      
+      </div>
     <button onClick={()=>{ver()}}>{mostrar}</button>
   </div>
   <div className="contato" id='contato'>

@@ -2,13 +2,14 @@ import './advogados.modules.css'
 import {BsFillTelephoneFill} from 'react-icons/bs'
 import {HiMail} from 'react-icons/hi'
 import advogada from '../../images/advogada2.webp'
+import { NavLink } from 'react-router-dom'
 export default function Advogados(){
   return(
     <div className="advogados">
       <header>
         <p>EQUIPE</p>
         <h1>NOSSOS<br/> ADVOGADOS</h1>
-        <div><a href="/">HOME</a> |<span>NOME DO ADVOGADO</span></div>
+        <div><NavLink to={"/"}>HOME </NavLink>|<span>NOME DO ADVOGADO</span></div>
       </header>
       <main>
         <img src={advogada} alt="" />
