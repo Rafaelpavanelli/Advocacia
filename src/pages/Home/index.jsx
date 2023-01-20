@@ -46,26 +46,36 @@ return( //Começa a renderizar o HTML
       <h2>Nossos <br/> Advogados</h2>
     </div>
     <div className="cards" style={{"transform": `translateX(${carrossel2}px)`,"transition":"0.5s"}}>
+      <a href="/advogados">
       <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
       <h4>Nome do Advogado</h4>
       <p>Area de Atuação</p>
       </div>
-      <div className="card" style={{"backgroundImage": `url(${advogada2})`}}>
+      </a>
+      <a href="/advogados">
+      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
       <h4>Nome do Advogado</h4>
       <p>Area de Atuação</p>
       </div>
+      </a>
+      <a href="/advogados">
+      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
+      <h4>Nome do Advogado</h4>
+      <p>Area de Atuação</p>
+      </div>
+      </a>
+      <a href="/advogados">
       <div className="card" style={{"backgroundImage": `url(${advogada3})`}}>
       <h4>Nome do Advogado</h4>
       <p>Area de Atuação</p>
       </div>
+      </a>
+      <a href="/advogados">
       <div className="card" style={{"backgroundImage": `url(${advogada2})`}}>
       <h4>Nome do Advogado</h4>
       <p>Area de Atuação</p>
       </div>
-      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
-      <h4>Nome do Advogado</h4>
-      <p>Area de Atuação</p>
-      </div>
+      </a>
     </div>
     <div className="buttons">
     <button onClick={()=>setCarrossel2(carrossel2+(carrossel2<0?200:0))} style={carrossel2==0?{"backgroundColor":"gray "}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>

@@ -72,6 +72,9 @@
   overflow: hidden;
   transform: translateX(0px);
 }
+.menu #equipe a {
+  text-decoration: none;
+}
 .menu #equipe p {
   text-align: center;
   color: rgb(255, 196, 0);

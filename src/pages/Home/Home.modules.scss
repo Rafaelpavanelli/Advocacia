@@ -64,6 +64,9 @@ overflow: hidden;
   }
 }
 #equipe{
+  a{
+    text-decoration: none;
+  }
   max-width: 70vw;
   display: flex;
   flex-direction: column;
