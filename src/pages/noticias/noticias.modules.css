@@ -1,0 +1,26 @@
+.description {
+  max-width: 100vw;
+  height: auto;
+  padding-bottom: 10vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.description .noticia {
+  width: 50vw;
+  padding-bottom: 10vh;
+  border: 1px solid white;
+  margin-top: 10vh;
+}
+.description .noticia img {
+  width: 100%;
+  padding-bottom: 2vh;
+}
+.description .noticia h2, .description .noticia p, .description .noticia h5 {
+  padding-left: 2vh;
+  color: white;
+  margin-top: 5vh;
+}
+.description .noticia p {
+  padding: 5vh;
+}/*# sourceMappingURL=noticias.modules.css.map */

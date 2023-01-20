@@ -60,6 +60,8 @@ main .description {
   width: 35vw;
   color: white;
   height: 80vh;
+  display: flex;
+  flex-direction: column;
 }
 main .description h2 {
   color: rgb(255, 196, 0);

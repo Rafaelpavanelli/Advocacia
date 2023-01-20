@@ -175,6 +175,7 @@ return( //Começa a renderizar o HTML
     </div>
     </div>
     <div className="noticias" style={{"height": `${overflow}`,"transition":"height 0.5s ease-in-out"}}>
+      <a href="/noticias" style={{textDecoration: "none",color:"white"}}>
     <div className="card">
       <img src={advogada1} alt=""/>
       <p id='data'>00/00/00</p>
@@ -183,7 +184,9 @@ return( //Começa a renderizar o HTML
          Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
          </p>
       </div>
-      <div className="card">
+      </a>
+      <a href="/noticias" style={{textDecoration: "none",color:"white"}}>
+    <div className="card">
       <img src={advogada1} alt=""/>
       <p id='data'>00/00/00</p>
       <h3>A SEPARAÇÃO DA SEPARAÇÃO</h3>
@@ -191,7 +194,9 @@ return( //Começa a renderizar o HTML
          Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
          </p>
       </div>
-      <div className="card">
+      </a>
+      <a href="/noticias" style={{textDecoration: "none",color:"white"}}>
+    <div className="card">
       <img src={advogada1} alt=""/>
       <p id='data'>00/00/00</p>
       <h3>A SEPARAÇÃO DA SEPARAÇÃO</h3>
@@ -199,7 +204,9 @@ return( //Começa a renderizar o HTML
          Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
          </p>
       </div>
-      <div className="card">
+      </a>
+      <a href="/noticias" style={{textDecoration: "none",color:"white"}}>
+    <div className="card">
       <img src={advogada1} alt=""/>
       <p id='data'>00/00/00</p>
       <h3>A SEPARAÇÃO DA SEPARAÇÃO</h3>
@@ -207,6 +214,7 @@ return( //Começa a renderizar o HTML
          Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
          </p>
       </div>
+      </a>
     </div>
     <button onClick={()=>{ver()}}>{mostrar}</button>
   </div>

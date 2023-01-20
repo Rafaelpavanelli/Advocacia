@@ -62,6 +62,8 @@ main{
     width: 35vw;
     color: white;
     height: 80vh;
+    display: flex;
+    flex-direction: column;
     h2{
       color: rgb(255, 196, 0) ;
       text-transform: uppercase;
