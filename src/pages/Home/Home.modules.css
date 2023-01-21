@@ -303,7 +303,7 @@
   }
   .menu .diferenciais .cards .card {
     position: relative;
-    height: 40vh;
+    height: auto;
     padding-left: 10vh;
     margin: 2vh 0vh;
   }
