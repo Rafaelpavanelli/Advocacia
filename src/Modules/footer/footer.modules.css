@@ -32,12 +32,23 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 999px) {
+  .footer .redes ul {
+    padding-right: 11vw;
+  }
+}
 .footer .redes ul li {
   margin-left: 12vh;
   list-style: none;
   font-size: 3rem;
   color: rgb(160, 160, 160);
   transition: 0.4s ease-in-out;
+}
+@media (max-width: 999px) {
+  .footer .redes ul li {
+    display: flex;
+    margin-left: 5vh;
+  }
 }
 .footer .redes ul li:hover {
   color: white;

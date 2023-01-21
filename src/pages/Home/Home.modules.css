@@ -26,6 +26,15 @@
   color: white;
   font-size: 4rem;
 }
+@media (max-width: 999px) {
+  .menu .Home h1 {
+    font-size: 6vh;
+    background-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-size: cover;
+  }
+}
 .menu .Home h1 span {
   color: rgba(243, 243, 243, 0.107);
   -webkit-text-stroke: 3px rgba(255, 255, 255, 0.696);

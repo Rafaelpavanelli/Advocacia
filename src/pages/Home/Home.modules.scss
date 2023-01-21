@@ -1,5 +1,6 @@
 @import "../../variaveisGlobais.scss";
 .menu{
+
 background-color: black;
 padding: 0px;
 margin: 0px;
@@ -18,6 +19,12 @@ overflow: hidden;
   display: flex;
   flex-direction: column;
   h1{
+    @include Mobile{
+      font-size: 6vh;
+      background-position: center;
+      object-fit: cover;
+      background-size: cover;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;

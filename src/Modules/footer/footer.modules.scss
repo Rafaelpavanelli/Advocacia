@@ -2,6 +2,7 @@
 .footer{
   @include Mobile{
     height: auto;
+   
   }
   display: flex;
   margin: 0px;
@@ -24,12 +25,20 @@
     }
   }
   .redes{
+   
     display: flex;
     min-width: 40vw;
     ul{
+      @include Mobile{
+        padding-right: 11vw;
+      }
       display: flex;
       justify-content: space-between;
       li{
+        @include Mobile{
+          display: flex;
+          margin-left: 5vh;
+          }
         margin-left: 12vh;
         list-style: none;
         font-size: 3rem;
