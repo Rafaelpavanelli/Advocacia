@@ -13,6 +13,7 @@ import advogada1 from '../../images/advogada1.jpg'
 import advogada2 from '../../images/advogada2.webp'
 import advogada3 from '../../images/advogado3.jpg';
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
+import { IoIosAddCircle } from "react-icons/io";
 import { AiOutlineArrowRight,AiOutlineArrowLeft } from "react-icons/ai";
 import { Navigate, NavLink } from 'react-router-dom';
 //Acaba as importações
@@ -57,8 +58,12 @@ return( //Começa a renderizar o HTML
             
              <div className="card" style={{"backgroundImage": `url(${dados.Perfil})`}}>
               <div id='cardbody'>
-              <h4>{dados.Nome}</h4>
-              <p>{dados.Area}</p>
+              <div className="cards" >
+             
+                <h4>  <IoIosAddCircle style={{color:"yellow",position:"absolute",top:"-12px",left:"2vh",fontSize:"1.5em"}}/> {dados.Nome}</h4>
+                <p>{dados.Area}</p>
+                </div>
+              
               </div>
               
              </div>

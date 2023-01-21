@@ -12,6 +12,7 @@
 * .navbar img {
   width: 13vw;
   height: 19vh;
+  border: none;
 }
 * .navbar .buttons {
   display: flex;

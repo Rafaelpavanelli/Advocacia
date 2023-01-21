@@ -10,7 +10,7 @@ export default function Navbar(){
   }
   return(
     <div className="navbar">
-      <NavLink to={"/"}>
+      <NavLink to={"/"} style={{textDecoration:"none"}}>
       <img src={Logo} />
       </NavLink>
       <div className={"mobile-menu"} onClick={()=>{openNavbar()}}>

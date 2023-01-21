@@ -99,25 +99,79 @@
   overflow: hidden;
   transform: translateX(0px);
 }
+@media (max-width: 999px) {
+  .menu #equipe .cards #cardbody {
+    margin-left: 1.4vh;
+    margin-bottom: -1vh;
+    height: auto;
+  }
+  .menu #equipe .cards #cardbody path {
+    display: none;
+  }
+}
+@media (max-width: 999px) {
+  .menu #equipe .cards #cardbody .cards {
+    align-items: flex-start;
+    display: flex;
+    background-color: rgba(3, 3, 3, 0.669);
+    border: none;
+    border-left: 10px solid rgb(255, 196, 0);
+    width: 50vw;
+    overflow: auto;
+    padding-left: 0px;
+    height: 12vh;
+  }
+  .menu #equipe .cards #cardbody .cards h4 {
+    color: rgb(255, 196, 0);
+  }
+  .menu #equipe .cards #cardbody .cards p {
+    color: white;
+  }
+}
 .menu #equipe a {
   text-decoration: none;
 }
 .menu #equipe #cardbody {
+  flex-direction: column;
   width: 20vw;
   height: 100vh;
   margin-top: -3vh;
   display: flex;
   justify-content: end;
   flex-direction: column;
-  margin-bottom: -2vh;
-  align-items: center;
-  transition: background-color 0.5s ease-in-out;
+  margin-bottom: -1vh;
+  margin-right: 9vh;
 }
-.menu #equipe #cardbody:hover {
+@media (max-width: 999px) {
+  .menu #equipe #cardbody {
+    width: auto;
+  }
+}
+.menu #equipe #cardbody:hover .cards {
   display: flex;
-  background-color: rgba(57, 57, 57, 0.4823529412);
+  background-color: black;
+  border-left: 3px solid rgb(255, 196, 0);
+}
+.menu #equipe #cardbody .cards {
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: -0.4vh;
+  display: none;
+  width: 18vw;
+  height: 15vh;
+}
+.menu #equipe #cardbody .cards p {
+  color: #a3a3a3;
+  text-align: left;
+  padding-left: 8vh;
+}
+.menu #equipe #cardbody .cards h4 {
+  padding-left: 8vh;
+  color: white;
 }
 .menu #equipe p {
+  margin-top: -12px;
   text-align: center;
   color: rgb(255, 196, 0);
 }

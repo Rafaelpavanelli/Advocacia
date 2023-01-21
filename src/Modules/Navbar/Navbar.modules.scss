@@ -8,9 +8,12 @@
     display: flex;
     padding: 0.8vh 11vw;
     justify-content: space-between;
+    
     img{
       width: 13vw;
       height: 19vh;
+      border: none;
+      
     }
     .buttons{
       display: flex;
