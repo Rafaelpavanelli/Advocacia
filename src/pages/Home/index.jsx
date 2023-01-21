@@ -56,8 +56,11 @@ return( //Começa a renderizar o HTML
           <NavLink to={`/advogados/${dados.id}`} >
             
              <div className="card" style={{"backgroundImage": `url(${dados.Perfil})`}}>
+              <div id='cardbody'>
               <h4>{dados.Nome}</h4>
               <p>{dados.Area}</p>
+              </div>
+              
              </div>
              </NavLink>
              </>

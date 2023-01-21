@@ -108,6 +108,23 @@ overflow: hidden;
   padding-bottom: 10vh;
   overflow: hidden;
   transform: translateX(0px);
+  
+  #cardbody{
+    
+    width: 20vw;
+    height: 100vh;
+    margin-top: -3vh;
+    display: flex;
+    justify-content:end;
+    flex-direction: column;
+    margin-bottom: -2vh;
+    align-items: center;
+    transition: background-color 0.5s ease-in-out;
+    &:hover{
+      display: flex;
+      background-color: #3939397b;
+    }
+  }
   p{
     text-align: center;
     color:$primary-color;

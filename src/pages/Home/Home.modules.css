@@ -102,6 +102,21 @@
 .menu #equipe a {
   text-decoration: none;
 }
+.menu #equipe #cardbody {
+  width: 20vw;
+  height: 100vh;
+  margin-top: -3vh;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  margin-bottom: -2vh;
+  align-items: center;
+  transition: background-color 0.5s ease-in-out;
+}
+.menu #equipe #cardbody:hover {
+  display: flex;
+  background-color: rgba(57, 57, 57, 0.4823529412);
+}
 .menu #equipe p {
   text-align: center;
   color: rgb(255, 196, 0);
