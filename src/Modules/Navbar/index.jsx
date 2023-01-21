@@ -28,7 +28,7 @@ export default function Navbar(){
         </div>
         <div className="links">
           <ul>
-            <li><a href="#home">HOME</a></li>
+            <li><NavLink to={"/"}>HOME</NavLink></li>
             <li><a href="#empresa">EMPRESA</a></li>
             <li><a href="#equipe">EQUIPE</a></li>
             <li><a href="#area">ÁREAS DE ATUAÇÃO</a></li>

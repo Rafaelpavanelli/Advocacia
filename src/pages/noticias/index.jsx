@@ -13,7 +13,7 @@ const dados=Post[0]
     <header>
         <p>BLOG</p>
         <h1>ARTIGOS<br/> E NOTICIAS</h1>
-        <div><NavLink to={"/"}>HOME </NavLink>|<span>NOME DO ARTIGO</span></div>
+        <div><NavLink to={"/"}>HOME </NavLink>| <NavLink to={"/blog"}>BLOG </NavLink>|<span>NOME DO ARTIGO</span></div>
       </header>
       <div className="description">
         <div className="noticia">

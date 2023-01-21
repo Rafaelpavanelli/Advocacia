@@ -14,7 +14,7 @@ import advogada2 from '../../images/advogada2.webp'
 import advogada3 from '../../images/advogado3.jpg';
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { AiOutlineArrowRight,AiOutlineArrowLeft } from "react-icons/ai";
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 //Acaba as importações
 
 export default function Home(){
@@ -84,21 +84,24 @@ return( //Começa a renderizar o HTML
       <img src={Ring} alt="" />
       <h4 style={{"fontSize": "0.8em"}}>SOLUÇÃO EXTRAJUDICIAL DE CONFLITOS
       </h4>
-      <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
+      <p>Mediação extrajudicial
+      de conflitos
+</p>
       </div>
       <div className="card">
       <img src={Advocacia} alt="" />
-      <h4>EMPRESARIAL</h4>
-      <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
+      <h4>CIVEL</h4>
+      <p>Elaboração de contratos, elaboração de notificações,cobrança de títulos, além de ações civeis em geral.
+</p>
       </div>
       <div className="card">
       <img src={planta} alt="" />
-      <h4>EMPRESARIAL</h4>
+      <h4>AGRARIO E <br/> AGRONEGÓCIO</h4>
       <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
       </div>
       <div className="card">
       <HiOutlineBuildingOffice2 id='icon'/>
-      <h4>EMPRESARIAL</h4>
+      <h4>AGRARIO E <br/> AGRONEGÓCIO</h4>
       <p>Assessoria societária,fusões,aquisições e gestão de riscos</p>
       </div>
       <div className="card">
@@ -177,7 +180,8 @@ return( //Começa a renderizar o HTML
         })}
     
       </div>
-    <button onClick={()=>{ver()}}>{mostrar}</button>
+      <NavLink to={"/blog"} style={{textAlign:"center"}}><button>mostrar</button></NavLink>
+   
   </div>
   <div className="contato" id='contato'>
     <p>CONTATO</p>

@@ -1,0 +1,84 @@
+.blog header {
+  background-image: url("../../images/fundos/backgroundAdvogados.webp");
+  max-width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 0px 10vh 18vw;
+  overflow: hidden;
+}
+@media (max-width: 999px) {
+  .blog header {
+    height: 40vh;
+  }
+}
+.blog header div a {
+  color: white;
+  text-decoration: none;
+}
+.blog header div a:hover {
+  color: rgb(255, 196, 0);
+}
+.blog header p {
+  color: rgb(255, 196, 0);
+}
+.blog header h1 {
+  color: white;
+  font-weight: bolder;
+}
+.blog header p:nth-child(1) {
+  margin-bottom: -1vh;
+}
+.blog header div:nth-child(3) {
+  color: white;
+  position: relative;
+  top: 120px;
+  left: 100vh;
+  background-color: black;
+  width: 18vw;
+  height: 10vh;
+  text-align: center;
+  padding: 2vh 0px 0px 0px;
+}
+.blog header div:nth-child(3) span {
+  margin-left: 1vh;
+  color: rgb(255, 196, 0);
+}
+.blog .main {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100vw;
+  height: auto;
+}
+.blog .main .materias {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: 2vw 0px;
+  height: auto;
+  padding: 0px 0px 2vh;
+}
+.blog .main .materias h2, .blog .main .materias h3, .blog .main .materias p {
+  padding: 0px 2vh;
+}
+.blog .main .materias h2, .blog .main .materias h3 {
+  font-weight: bold;
+  color: white;
+}
+.blog .main .materias p {
+  color: white;
+}
+.blog .main .materias a {
+  color: white;
+  text-decoration: none;
+  text-align: end;
+  padding: 2vh;
+  transition: color 0.5s ease-in-out;
+}
+.blog .main .materias a:hover {
+  color: rgb(255, 196, 0);
+}/*# sourceMappingURL=blog.modules.css.map */
