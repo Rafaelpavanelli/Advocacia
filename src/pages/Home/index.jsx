@@ -1,4 +1,5 @@
-import './Home.modules.css'
+import './Home.modules.css';
+import bd from '../../controller/bd.json'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Advocacia from './../../icons/advocacia.ico';
 import Suporte from './../../icons/homemidea.ico';
@@ -17,6 +18,7 @@ import { NavLink } from 'react-router-dom';
 //Acaba as importações
 
 export default function Home(){
+  const Adv=bd.Advogados
   function ver(){ //Função para abrir e fechar as noticias
     overflow!="80vh"?setOverflow("80vh"):setOverflow("auto")
     overflow!="80vh"?setMostrar("Ver mais"):setMostrar("Ver menos")
@@ -48,35 +50,23 @@ return( //Começa a renderizar o HTML
       <h2>Nossos <br/> Advogados</h2>
     </div>
     <div className="cards" style={{"transform": `translateX(${carrossel2}px)`,"transition":"0.5s"}}>
-      <NavLink to={"/advogados"} >
-      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
-      <h4>Nome do Advogado</h4>
-      <p>Area de Atuação</p>
-      </div>
-      </NavLink>
-      <NavLink to={"/advogados"} >
-      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
-      <h4>Nome do Advogado</h4>
-      <p>Area de Atuação</p>
-      </div>
-      </NavLink>
-      <NavLink to={"/advogados"} >
-      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
-      <h4>Nome do Advogado</h4>
-      <p>Area de Atuação</p>
-      </div>
-      </NavLink>
-      <NavLink to={"/advogados"} >
-      <div className="card" style={{"backgroundImage": `url(${advogada1})`}}>
-      <h4>Nome do Advogado</h4>
-      <p>Area de Atuação</p>
-      </div>
-      </NavLink>
-    
+      {bd.Advogados.map(dados=>{
+        return(
+          <>
+          <NavLink to={`/advogados/${dados.id}`} >
+            
+             <div className="card" style={{"backgroundImage": `url(${dados.Perfil})`}}>
+              <h4>{dados.Nome}</h4>
+              <p>{dados.Area}</p>
+             </div>
+             </NavLink>
+             </>
+        )
+      })}
     </div>
     <div className="buttons">
-    <button onClick={()=>setCarrossel2(carrossel2+(carrossel2<0?200:0))} style={carrossel2==0?{"backgroundColor":"gray "}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
-    <button onClick={()=>setCarrossel2(carrossel2-(carrossel2>-1000?200:0))} style={carrossel2==-1000?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
+    <button onClick={()=>setCarrossel2(carrossel2>0?0:carrossel2+(carrossel2<0?150:0))} style={carrossel2==0?{"backgroundColor":"gray "}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
+    <button onClick={()=>setCarrossel2(carrossel2-(carrossel2>-(bd.Advogados.length*150)?100:0))} style={carrossel2==-(bd.Advogados.length*100)?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
   </div>
   </div>
   <div id="area">
@@ -172,57 +162,20 @@ return( //Começa a renderizar o HTML
     </div>
     </div>
     <div className="noticias" style={{"height": `${overflow}`,"transition":"height 0.5s ease-in-out"}}>
-      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
-    <div className="card">
-      <img src={advogada1} alt=""/>
-      <p id='data'>00/00/00</p>
-      <h3>A SEPARAÇÃO DA SEPARAÇÃO</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab culpa saepe suscipit obcaecati fugit magni eum soluta quo voluptatibus?
-         Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
-         </p>
-      </div>
-      </NavLink>
-      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
-    <div className="card">
-      <img src={advogada1} alt=""/>
-      <p id='data'>00/00/00</p>
-      <h3>A SEPARAÇÃO DA SEPARAÇÃO</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab culpa saepe suscipit obcaecati fugit magni eum soluta quo voluptatibus?
-         Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
-         </p>
-      </div>
-      </NavLink>
-      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
-    <div className="card">
-      <img src={advogada1} alt=""/>
-      <p id='data'>00/00/00</p>
-      <h3>A SEPARAÇÃO DA SEPARAÇÃO</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab culpa saepe suscipit obcaecati fugit magni eum soluta quo voluptatibus?
-         Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
-         </p>
-      </div>
-      </NavLink>
-      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
-    <div className="card">
-      <img src={advogada1} alt=""/>
-      <p id='data'>00/00/00</p>
-      <h3>A SEPARAÇÃO DA SEPARAÇÃO</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab culpa saepe suscipit obcaecati fugit magni eum soluta quo voluptatibus?
-         Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
-         </p>
-      </div>
-      </NavLink>
-      <NavLink to="/noticias" style={{textDecoration: "none",color:"white"}}>
-    <div className="card">
-      <img src={advogada1} alt=""/>
-      <p id='data'>00/00/00</p>
-      <h3>A SEPARAÇÃO DA SEPARAÇÃO</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab culpa saepe suscipit obcaecati fugit magni eum soluta quo voluptatibus?
-         Error velit ipsum tempore aut nihil optio perspiciatis accusantium blanditiis!
-         </p>
-      </div>
-      </NavLink>
       
+        {bd.Posts.map((post)=>{
+          return(
+            <NavLink to={`/noticias/${post.id}`} style={{textDecoration: "none",color:"white"}} key={post.id}>
+            <div className="card">
+            <img src={post.Background} alt=""/>
+            <p id='data'>{post.Data}</p>
+            <h3>{post.Titulo}</h3>
+            <p>{post.Materia}</p>
+            </div>
+            </NavLink>
+          )
+        })}
+    
       </div>
     <button onClick={()=>{ver()}}>{mostrar}</button>
   </div>

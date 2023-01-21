@@ -4,6 +4,7 @@ import Navbar from './Modules/Navbar'
 import Footer from './Modules/footer'
 import Advogados from './pages/Advogados'
 import Noticias from './pages/noticias'
+import AddAdvogado from './pages/AddAdvogado'
 import './App.css'
 import { BrowserRouter, Routes,Route } from 'react-router-dom'
 
@@ -15,8 +16,9 @@ function App() {
     <Navbar />
     <Routes>
     <Route path='/' element={<Home />}/>
-    <Route path='/noticias' element={<Noticias />}/>
-    <Route path='/advogados' element={<Advogados />}/>
+    <Route path='/noticias/:id' element={<Noticias />}/>
+    <Route path='/addadvogado' element={<AddAdvogado />}/>
+    <Route path='/advogados/:id' element={<Advogados />}/>
     </Routes>
     <Footer />
     </BrowserRouter>
