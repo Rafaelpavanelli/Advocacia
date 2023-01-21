@@ -10,6 +10,11 @@
   padding-top: 10vh;
   flex-wrap: wrap;
 }
+@media (max-width: 999px) {
+  .footer {
+    height: auto;
+  }
+}
 .footer .contatos {
   margin: 0px 2vw;
   display: flex;

@@ -1,11 +1,24 @@
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { AiOutlineInstagram,AiOutlineFacebook,AiOutlineYoutube  } from 'react-icons/ai';
 import Logo from './../../images/Logo.png'
 import './Navbar.modules.css'
 export default function Navbar(){
+  const[navbar,setNavbar] =useState('')
+  const openNavbar=()=>{
+    navbar != ''? setNavbar(''):setNavbar('active')
+  }
   return(
     <div className="navbar">
+      <NavLink to={"/"}>
       <img src={Logo} />
-      <div className="buttons">
+      </NavLink>
+      <div className={"mobile-menu"} onClick={()=>{openNavbar()}}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+      <div className={`buttons ${navbar}`}>
         <div className="redes">
           <ul>
             <a href="#"><li><AiOutlineFacebook/></li></a>

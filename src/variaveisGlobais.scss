@@ -1,0 +1,8 @@
+$primary-color:rgb(255, 196, 0);
+$background-black:black;
+$background-gray:rgb(28, 28, 28);
+@mixin Mobile{
+  @media (max-width: 999px) {
+    @content;
+  }
+}

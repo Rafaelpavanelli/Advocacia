@@ -1,5 +1,8 @@
-
+@import '../../variaveisGlobais.scss';
 .footer{
+  @include Mobile{
+    height: auto;
+  }
   display: flex;
   margin: 0px;
   height: 50vh;

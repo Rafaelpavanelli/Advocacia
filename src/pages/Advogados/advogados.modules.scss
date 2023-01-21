@@ -1,4 +1,8 @@
+@import "../../variaveisGlobais.scss";
 header{
+  @include Mobile{
+    height: 40vh;
+  }
   background-image: url('../../images/fundos/backgroundAdvogados.webp');
   max-width: 100vw;
   height: 50vh;
@@ -43,20 +47,34 @@ header{
   }
 }
 main{
+  @include Mobile{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
   display: flex;
   padding: 20vh;
   justify-content: space-between;
   height: 100vh;
   background-color: black;
-
   
   img{
+    @include Mobile{
+      width: 70vw;
+      height: 50vh;
+      margin-bottom: 2vh;
+    }
     width: 26vw;
     height: 65vh;
     border: 1px solid white;
-    image-orientation: deg;
+    
   }
   .description{
+    @include Mobile{
+      height: auto;
+      width: 70vw;
+    }
     border: 1px solid white;
     padding: 7vh;
     width: 35vw;
@@ -75,6 +93,11 @@ main{
     }
   }
   .contato{
+    @include Mobile{
+      height: auto;
+      width: 60vw;
+      margin-top: 1vh;
+    }
     display: flex;
     flex-direction: column;
     padding: 2vh 0px 0px 1vw;

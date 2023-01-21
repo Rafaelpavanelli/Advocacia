@@ -8,6 +8,11 @@ header {
   padding: 0px 0px 10vh 18vw;
   overflow: hidden;
 }
+@media (max-width: 999px) {
+  header {
+    height: 40vh;
+  }
+}
 header div a {
   color: white;
   text-decoration: none;
@@ -48,11 +53,25 @@ main {
   height: 100vh;
   background-color: black;
 }
+@media (max-width: 999px) {
+  main {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 main img {
   width: 26vw;
   height: 65vh;
   border: 1px solid white;
-  image-orientation: deg;
+}
+@media (max-width: 999px) {
+  main img {
+    width: 70vw;
+    height: 50vh;
+    margin-bottom: 2vh;
+  }
 }
 main .description {
   border: 1px solid white;
@@ -62,6 +81,12 @@ main .description {
   height: 80vh;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 999px) {
+  main .description {
+    height: auto;
+    width: 70vw;
+  }
 }
 main .description h2 {
   color: rgb(255, 196, 0);
@@ -80,6 +105,13 @@ main .contato {
   width: 15vw;
   height: 40vh;
   border: 1px solid white;
+}
+@media (max-width: 999px) {
+  main .contato {
+    height: auto;
+    width: 60vw;
+    margin-top: 1vh;
+  }
 }
 main .contato h2 {
   color: rgb(255, 196, 0);

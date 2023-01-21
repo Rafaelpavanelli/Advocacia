@@ -1,3 +1,4 @@
+@import "../../variaveisGlobais.scss";
 *{
   margin: 0px;
   padding: 0px;
@@ -52,5 +53,62 @@
         
       }
     }
+    .mobile-menu{
+      cursor: pointer;
+      display: none;
+    }
+   .mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: black;
+    margin: 8px;
+   }
+  }
+  @include Mobile{
+    .navbar{
+      img{
+        width: auto;
+        height: 80%;
+      }
+      height: 20vh;
+      &::-webkit-scrollbar {display: none;}
+      
+      .mobile-menu{
+        display: block;
+      }
+    }
+    .buttons.active{
+      height: 90vh;
+      .links, .redes{
+        opacity: 1;
+       }
+    }
+    .buttons{
+    height: 0px;
+     align-items: center;
+     flex-direction: column;
+     position: absolute;
+     top: 20vh;
+     right: 0vh;
+     width: 50vw;
+     transition: 0.5s ease-in-out;
+     background-color: $primary-color;
+     overflow-y: hidden;
+     
+     .links, .redes{
+      transition: 0.8s ease-out;
+      opacity: 0;
+
+     }
+     .links{
+      ul{
+        flex-direction: column;
+        align-items: center;
+        
+      }
+      
+     }
+    }
+   
   }
 }

@@ -141,25 +141,25 @@ return( //Começa a renderizar o HTML
     <div className="card">
     <img src={clip }alt=""/>
     <h5>SERVIÇO <br/>PERSONALIZADO <br/> E DIFERENCIADO </h5>
-    <p>adequamos nossa prestação de serviços às suas necessidades.
+    <p id='frase'>adequamos nossa prestação de serviços às suas necessidades.
 </p>
     </div>
     <div className="card">
     <img src={Suporte }alt="" style={{"width":"20vh","padding": "0vh 1vh"}}/>
     <h5>SERVIÇO <br/>PERSONALIZADO <br/> E DIFERENCIADO </h5>
-    <p>adequamos nossa prestação de serviços às suas necessidades.
+    <p id='frase'>adequamos nossa prestação de serviços às suas necessidades.
 </p>
     </div>
     <div className="card" >
     <img src={Tv}alt=""/>
     <h5>SERVIÇO <br/>PERSONALIZADO <br/> E DIFERENCIADO </h5>
-    <p>adequamos nossa prestação de serviços às suas necessidades.
+    <p id='frase'>adequamos nossa prestação de serviços às suas necessidades.
 </p>
     </div>
     <div className="card">
     <img src={Profissoes} alt="" />
     <h5>SERVIÇO <br/>PERSONALIZADO <br/> E DIFERENCIADO </h5>
-    <p>adequamos nossa prestação de serviços às suas necessidades.
+    <p id='frase'>adequamos nossa prestação de serviços às suas necessidades.
 </p>
     </div>
   </div>

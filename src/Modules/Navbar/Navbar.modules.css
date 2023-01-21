@@ -47,4 +47,55 @@
 * .navbar .buttons .links ul li a:hover {
   transition: 0.3s ease-in-out;
   text-decoration: underline;
+}
+* .navbar .mobile-menu {
+  cursor: pointer;
+  display: none;
+}
+* .navbar .mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: black;
+  margin: 8px;
+}
+@media (max-width: 999px) {
+  * .navbar {
+    height: 20vh;
+  }
+  * .navbar img {
+    width: auto;
+    height: 80%;
+  }
+  * .navbar::-webkit-scrollbar {
+    display: none;
+  }
+  * .navbar .mobile-menu {
+    display: block;
+  }
+  * .buttons.active {
+    height: 90vh;
+  }
+  * .buttons.active .links, * .buttons.active .redes {
+    opacity: 1;
+  }
+  * .buttons {
+    height: 0px;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 20vh;
+    right: 0vh;
+    width: 50vw;
+    transition: 0.5s ease-in-out;
+    background-color: rgb(255, 196, 0);
+    overflow-y: hidden;
+  }
+  * .buttons .links, * .buttons .redes {
+    transition: 0.8s ease-out;
+    opacity: 0;
+  }
+  * .buttons .links ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=Navbar.modules.css.map */
