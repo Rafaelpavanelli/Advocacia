@@ -115,10 +115,10 @@ overflow: hidden;
           background-color: rgba(3, 3, 3, 0.669);
           border: none;
           border-left: 10px solid $primary-color;
-          width: 50vw;
+          min-width: 50vw;
           overflow: auto;
           padding-left: 0px;
-          
+          overflow: hidden;
           height: 12vh;
           h4{
             color: $primary-color;
