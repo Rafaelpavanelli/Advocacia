@@ -73,18 +73,17 @@
 @media (max-width: 999px) {
   .menu #empresa {
     display: block;
-    height: auto;
-    width: 100vw;
-    align-items: center;
-  }
-  .menu #empresa .titulo {
-    margin-bottom: -2vh;
   }
   .menu #empresa .titulo p {
-    font-size: 1.3rem;
+    font-size: 1.3em;
+    margin-bottom: -2%;
+  }
+  .menu #empresa .frase {
+    width: auto;
   }
   .menu #empresa .frase p {
     width: 100%;
+    font-size: 1.3rem;
   }
 }
 .menu #equipe {
@@ -98,6 +97,11 @@
   overflow: hidden;
   transform: translateX(0px);
   position: relative;
+}
+@media (max-width: 999px) {
+  .menu #equipe {
+    padding-top: 20vh;
+  }
 }
 .menu #equipe .cards {
   width: 80vw;
@@ -126,6 +130,7 @@
   flex-direction: column;
   margin-bottom: -1vh;
   margin-right: 9vh;
+  display: flexbox;
 }
 @media (max-width: 999px) {
   .menu #equipe #cardbody {
@@ -138,13 +143,14 @@
   border-left: 3px solid rgb(255, 196, 0);
 }
 .menu #equipe #cardbody .cards {
+  display: block;
   position: relative;
+  margin-left: 40px;
+  justify-content: center;
   flex-direction: column;
-  margin-bottom: -0.4vh;
+  margin-bottom: -0.4%;
   display: none;
-  left: 30px;
-  width: 100%;
-  height: 15vh;
+  height: 10vh;
 }
 .menu #equipe #cardbody .cards p {
   color: #a3a3a3;
@@ -157,16 +163,15 @@
 }
 @media (max-width: 999px) {
   .menu #equipe #cardbody .cards {
-    align-items: flex-start;
+    text-align: center;
     display: flex;
     background-color: rgba(3, 3, 3, 0.669);
     border: none;
-    border-left: 10px solid rgb(255, 196, 0);
+    border-left: 5px solid rgb(255, 196, 0);
     min-width: 50vw;
     overflow: auto;
-    padding-left: 0px;
-    overflow: hidden;
     height: 12vh;
+    padding: auto;
   }
   .menu #equipe #cardbody .cards h4 {
     color: rgb(255, 196, 0);
@@ -191,46 +196,36 @@
 .menu #equipe .cards {
   margin: 10vh 0px 10vh auto;
   display: flex;
-  justify-content: start;
 }
 @media (max-width: 999px) {
   .menu #equipe .cards {
-    transform: translateX(0);
     padding: 1vh 0px;
     flex-direction: column;
+    overflow-x: hidden;
     border: 1px solid rgb(255, 196, 0);
     overflow-y: scroll;
     margin-left: 10vh;
-    width: 100vw;
+    width: auto;
     height: 70vh;
     justify-content: space-between;
+    border: none;
+    background-clip: border-box;
+    background-position: center right;
     align-items: center;
   }
+  .menu #equipe .cards::-webkit-scrollbar {
+    width: 0px;
+  }
   .menu #equipe .cards a .card {
-    background-clip: border-box;
-    -o-object-fit: cover;
-       object-fit: cover;
-    background-position: right;
+    overflow: hidden;
     margin-top: 2vh;
-    height: 50vh;
-    width: 100vw;
-  }
-}
-@media (max-width: 999px) and (max-width: 999px) {
-  .menu #equipe .cards a .card {
+    height: 60vh;
+    background-size: contain;
+    background-repeat: none;
     width: 50vw;
-    height: 50vh;
-    background-repeat: no-repeat;
-    background-clip: border-box;
   }
-  .menu #equipe .cards a .card p, .menu #equipe .cards a .card h4 {
-    background-color: black;
-  }
-}
-@media (max-width: 999px) {
-  .menu #equipe .cards a .card h4,
-.menu #equipe .cards a .card p {
-    color: white;
+  .menu #equipe .cards a .card .cards {
+    width: 100vw;
   }
 }
 .menu #equipe .cards .card {
@@ -273,7 +268,7 @@
   color: rgb(255, 196, 0);
 }
 .menu #equipe .buttons {
-  margin-left: 100vh;
+  margin-left: 80%;
   width: auto;
   display: flex;
 }
@@ -314,7 +309,7 @@
   justify-content: start;
 }
 .menu #area .cards .card {
-  padding: 3vh 5vh 1vh 5vh;
+  padding: 5vh 6vh 5vh 6vh;
   margin-right: 5vh;
   background-color: rgb(28, 28, 28);
   width: 15vw;
@@ -349,7 +344,8 @@
   color: black;
 }
 .menu #area .buttons {
-  margin-left: 100vh;
+  width: auto;
+  margin-left: 80%;
 }
 .menu #area .buttons button {
   margin: 0px 1vh;
@@ -364,13 +360,13 @@
 }
 @media (max-width: 999px) {
   .menu #area .cards {
+    display: flex;
     margin-left: 0vh;
     align-items: center;
     height: 50vh;
     overflow-y: scroll;
     width: 100vw;
     flex-direction: column;
-    justify-content: space-between;
     border-top: 1px solid rgb(255, 196, 0);
     border-bottom: 1px solid rgb(255, 196, 0);
   }
@@ -390,10 +386,19 @@
 @media (max-width: 999px) {
   .menu .diferenciais {
     height: auto;
+    padding: 0vh 1vh;
     padding-bottom: 10vh;
   }
   .menu .diferenciais #head {
+    margin: auto;
+    display: flex;
     flex-direction: column;
+  }
+  .menu .diferenciais #head .frase {
+    width: 100vw;
+  }
+  .menu .diferenciais #head .frase p {
+    width: auto;
   }
   .menu .diferenciais .cards {
     height: auto;
@@ -409,9 +414,13 @@
   }
   .menu .diferenciais .cards .card {
     position: relative;
+    display: flex;
     height: auto;
     padding-left: 10vh;
     margin: 2vh 0vh;
+  }
+  .menu .diferenciais .cards .card img {
+    margin-left: 1vw;
   }
   .menu .diferenciais .cards .card #frase {
     width: 40vw;
@@ -460,6 +469,11 @@
   min-width: 12vh;
   max-width: 13vh;
   margin-left: 8vh;
+}
+@media (max-width: 999px) {
+  .menu .diferenciais .cards .card img {
+    margin: auto;
+  }
 }
 .menu .diferenciais .cards .card h5 {
   font-weight: bold;

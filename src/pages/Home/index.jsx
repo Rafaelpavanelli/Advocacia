@@ -36,7 +36,7 @@ return( //Começa a renderizar o HTML
     <a href="#">SAIBA MAIS</a>
   </div>
   <div id="empresa">
-    <div className='titulo'>
+    <div className='titulo' >
       <p>EMPRESA</p>
       <h2>NOSSO <br/>PROPÓSITO</h2>
     </div>
@@ -56,7 +56,7 @@ return( //Começa a renderizar o HTML
           <>
           <NavLink to={`/advogados/${dados.id}`} >
             
-             <div className="card" style={{"backgroundImage": `url(${dados.Perfil})`}}>
+             <div className="card" style={{"backgroundImage": `url(${dados.Perfil})`,backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundColor:"transparent"}}>
               <div id='cardbody'>
               <div className="cards" >
              
@@ -73,8 +73,8 @@ return( //Começa a renderizar o HTML
       })}
     </div>
     <div className="buttons">
-    <button onClick={()=>setCarrossel2(carrossel2>0?0:carrossel2+(carrossel2<-400?1000:0))} style={carrossel2>-400?{"backgroundColor":"gray",cursor:"default"}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
-    <button onClick={()=>setCarrossel2(carrossel2-(carrossel2>-(bd.Advogados.length*250)?1000:0))} style={carrossel2<-(bd.Advogados.length*150)?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
+    <button onClick={()=>setCarrossel2(carrossel2>0?0:carrossel2+(carrossel2<-400?950:0))} style={carrossel2>-400?{"backgroundColor":"gray",cursor:"default"}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
+    <button onClick={()=>setCarrossel2(carrossel2-(carrossel2>-(bd.Advogados.length*150)?950:0))} style={carrossel2<-(bd.Advogados.length*150)?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
   </div>
   </div>
   <div id="area">
@@ -124,8 +124,8 @@ return( //Começa a renderizar o HTML
       </div>
     </div>
     <div className="buttons">
-    <button onClick={()=>setCarrossel(carrossel+(carrossel<0?200:0))} style={carrossel==0?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
-    <button onClick={()=>setCarrossel(carrossel-(carrossel>-1000?200:0))} style={carrossel==-1000?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
+    <button onClick={()=>setCarrossel(carrossel+(carrossel<0?1000:0))} style={carrossel==0?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
+    <button onClick={()=>setCarrossel(carrossel-(carrossel>-1000?1000:0))} style={carrossel==-1000?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
     </div>
   </div>
   <div className="diferenciais">

@@ -32,7 +32,7 @@ export default function Navbar(){
             <li><a href="#empresa">EMPRESA</a></li>
             <li><a href="#equipe">EQUIPE</a></li>
             <li><a href="#area">ÁREAS DE ATUAÇÃO</a></li>
-            <li><a href="#noticias">NOTÍCIAS E ARTIGOS</a></li>
+            <li><a href="#blog">NOTÍCIAS E ARTIGOS</a></li>
             <li><a href="#contato">CONTATO</a></li>
           </ul>
         </div>

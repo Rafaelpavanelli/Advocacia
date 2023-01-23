@@ -83,25 +83,27 @@
 
     //Mobile
     @include Mobile {
-      display: block;
-      height: auto;
-      width: 100vw;
-      align-items: center;
-
+    display: block;
+    
+    
+     
+      
 
       .titulo {
-        margin-bottom: -2vh;
-
+        
         p {
-          font-size: 1.3rem;
+          font-size: 1.3em;
+          margin-bottom: -2%;
         }
 
         h2 {}
       }
 
       .frase {
+        width: auto;
         p {
           width: 100%;
+          font-size: 1.3rem;
         }
 
       }
@@ -109,6 +111,9 @@
   }
 
   #equipe {
+   @include Mobile{
+    padding-top: 20vh;
+   }
     .cards {
       width: 80vw;
       justify-content: left;
@@ -119,7 +124,6 @@
           margin-left: 1.4vh;
           margin-bottom: -1vh;
           height: auto;
-
           path {
             display: none;
           }
@@ -164,8 +168,10 @@
           border-left: 3px solid $primary-color;
         }
       }
-
+      display: flexbox;
+      
       .cards {
+        display: block;
         position: relative;
         p {
           color: #a3a3a3;
@@ -176,26 +182,24 @@
           padding-left: 8vh;
           color: white;
         }
-
+        margin-left: 40px;
+        justify-content: center;
         flex-direction: column;
-        margin-bottom: -0.4vh;
+        margin-bottom: -0.4%;
         display: none;
-        left: 30px;
-        width: 100%;
-        height: 15vh;
+      
+        height: 10vh;
         //Modile
         @include Mobile {
-          align-items: flex-start;
+         text-align: center;
           display: flex;
           background-color: rgba(3, 3, 3, 0.669);
           border: none;
-          border-left: 10px solid $primary-color;
+          border-left: 5px solid $primary-color;
           min-width: 50vw;
           overflow: auto;
-          padding-left: 0px;
-          overflow: hidden;
           height: 12vh;
-
+          padding: auto;
           h4 {
             color: $primary-color;
           }
@@ -227,42 +231,38 @@
     .cards {
       margin: 10vh 0px 10vh auto;
       display: flex;
-      justify-content: start;
+     
       @include Mobile {
-        transform: translateX(0);
+        
         padding: 1vh 0px;
         flex-direction: column;
+        overflow-x: hidden;
         border: 1px solid $primary-color;
         overflow-y: scroll;
         margin-left: 10vh;
-        width: 100vw;
+        &::-webkit-scrollbar{
+          width: 0px;
+        }
+        width: auto;
         height: 70vh;
         justify-content: space-between;
+        border: none;
+        background-clip: border-box;
+        background-position: center right;
         align-items: center;
-
+       
         a {
           .card {
-            background-clip: border-box;
-            object-fit: cover;
-            background-position: right;
+            overflow: hidden;
             margin-top: 2vh;
-            height: 50vh;
-            width: 100vw;
-            @include Mobile{
-              width: 50vw;
-              height: 50vh;
-              
-              background-repeat: no-repeat;
-              background-clip: border-box;
-              p,h4{
-                background-color: black;
-                
-              }
-            }
-
-            h4,
-            p {
-              color: white;
+            height: 60vh;
+            background-size: contain;
+            
+            background-repeat: none;
+            width: 50vw;
+            
+            .cards{
+              width: 100vw;
             }
 
           }
@@ -323,7 +323,7 @@
     }
 
     .buttons {
-      margin-left: 100vh;
+      margin-left: 80%;
       width: auto;
       display: flex;
       button {
@@ -340,7 +340,7 @@
         }
       }
     }
-
+    
   }
 
   #area {
@@ -371,7 +371,7 @@
       justify-content: start;
 
       .card {
-        padding: 3vh 5vh 1vh 5vh;
+        padding: 5vh 6vh 5vh 6vh;
         margin-right: 5vh;
         background-color: $background-gray;
         width: 15vw;
@@ -418,8 +418,8 @@
     }
 
     .buttons {
-      margin-left: 100vh;
-
+      width: auto;
+      margin-left: 80%;
       button {
         margin: 0px 1vh;
         background-color: $primary-color;
@@ -437,13 +437,13 @@
 
     @include Mobile {
       .cards {
+        display: flex;
         margin-left: 0vh;
         align-items: center;
         height: 50vh;
         overflow-y: scroll;
         width: 100vw;
         flex-direction: column;
-        justify-content: space-between;
         border-top: 1px solid $primary-color;
         border-bottom: 1px solid $primary-color;
 
@@ -466,10 +466,24 @@
 
     @include Mobile {
       height: auto;
+      padding: 0vh 1vh;
       padding-bottom: 10vh;
 
       #head {
+        margin: auto;
+        display: flex;
         flex-direction: column;
+       
+        .frase{
+          width: 100vw;
+          
+          p{
+            width: auto;
+           
+           }
+        }
+       
+        
       }
 
       .cards {
@@ -487,10 +501,13 @@
 
         .card {
           position: relative;
+          display: flex;
           height: auto;
           padding-left: 10vh;
           margin: 2vh 0vh;
-
+          img{
+            margin-left: 1vw;
+          }
           #frase {
             width: 40vw;
           }
@@ -544,6 +561,9 @@
           min-width: 12vh;
           max-width: 13vh;
           margin-left: 8vh;
+          @include Mobile{
+          margin: auto;
+          }
         }
 
         h5 {
