@@ -26,19 +26,19 @@
   color: white;
   font-size: 4rem;
 }
+.menu .Home h1 span {
+  color: rgba(243, 243, 243, 0.107);
+  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.696);
+  text-stroke: 3px rgba(255, 255, 255, 0.696);
+}
 @media (max-width: 999px) {
-  .menu .Home h1 {
+  .menu .Home h1 span {
     font-size: 6vh;
     background-position: center;
     -o-object-fit: cover;
        object-fit: cover;
     background-size: cover;
   }
-}
-.menu .Home h1 span {
-  color: rgba(243, 243, 243, 0.107);
-  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.696);
-  text-stroke: 3px rgba(255, 255, 255, 0.696);
 }
 .menu .Home a {
   color: rgba(0, 0, 0, 0.689);
@@ -56,24 +56,6 @@
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 999px) {
-  .menu #empresa {
-    flex-direction: column;
-    height: 70vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .menu #empresa .titulo {
-    margin-bottom: -2vh;
-  }
-  .menu #empresa .titulo p {
-    font-size: 1.3rem;
-  }
-  .menu #empresa .frase p {
-    width: 50vw;
-  }
-}
 .menu #empresa .titulo p {
   color: rgb(255, 196, 0);
   font-weight: bolder;
@@ -88,6 +70,23 @@
   font-size: 1.3rem;
   color: #c0c0c0;
 }
+@media (max-width: 999px) {
+  .menu #empresa {
+    display: block;
+    height: auto;
+    width: 100vw;
+    align-items: center;
+  }
+  .menu #empresa .titulo {
+    margin-bottom: -2vh;
+  }
+  .menu #empresa .titulo p {
+    font-size: 1.3rem;
+  }
+  .menu #empresa .frase p {
+    width: 100%;
+  }
+}
 .menu #equipe {
   max-width: 70vw;
   display: flex;
@@ -98,6 +97,11 @@
   padding-bottom: 10vh;
   overflow: hidden;
   transform: translateX(0px);
+  position: relative;
+}
+.menu #equipe .cards {
+  width: 80vw;
+  justify-content: left;
 }
 @media (max-width: 999px) {
   .menu #equipe .cards #cardbody {
@@ -107,26 +111,6 @@
   }
   .menu #equipe .cards #cardbody path {
     display: none;
-  }
-}
-@media (max-width: 999px) {
-  .menu #equipe .cards #cardbody .cards {
-    align-items: flex-start;
-    display: flex;
-    background-color: rgba(3, 3, 3, 0.669);
-    border: none;
-    border-left: 10px solid rgb(255, 196, 0);
-    min-width: 50vw;
-    overflow: auto;
-    padding-left: 0px;
-    overflow: hidden;
-    height: 12vh;
-  }
-  .menu #equipe .cards #cardbody .cards h4 {
-    color: rgb(255, 196, 0);
-  }
-  .menu #equipe .cards #cardbody .cards p {
-    color: white;
   }
 }
 .menu #equipe a {
@@ -154,12 +138,12 @@
   border-left: 3px solid rgb(255, 196, 0);
 }
 .menu #equipe #cardbody .cards {
-  justify-content: center;
   position: relative;
   flex-direction: column;
   margin-bottom: -0.4vh;
   display: none;
-  width: 18vw;
+  left: 30px;
+  width: 100%;
   height: 15vh;
 }
 .menu #equipe #cardbody .cards p {
@@ -170,6 +154,26 @@
 .menu #equipe #cardbody .cards h4 {
   padding-left: 8vh;
   color: white;
+}
+@media (max-width: 999px) {
+  .menu #equipe #cardbody .cards {
+    align-items: flex-start;
+    display: flex;
+    background-color: rgba(3, 3, 3, 0.669);
+    border: none;
+    border-left: 10px solid rgb(255, 196, 0);
+    min-width: 50vw;
+    overflow: auto;
+    padding-left: 0px;
+    overflow: hidden;
+    height: 12vh;
+  }
+  .menu #equipe #cardbody .cards h4 {
+    color: rgb(255, 196, 0);
+  }
+  .menu #equipe #cardbody .cards p {
+    color: white;
+  }
 }
 .menu #equipe p {
   margin-top: -12px;
@@ -191,6 +195,7 @@
 }
 @media (max-width: 999px) {
   .menu #equipe .cards {
+    transform: translateX(0);
     padding: 1vh 0px;
     flex-direction: column;
     border: 1px solid rgb(255, 196, 0);
@@ -202,11 +207,29 @@
     align-items: center;
   }
   .menu #equipe .cards a .card {
+    background-clip: border-box;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-position: right;
     margin-top: 2vh;
-    height: 40vh;
-    width: 50vw;
+    height: 50vh;
+    width: 100vw;
   }
-  .menu #equipe .cards a .card h4, .menu #equipe .cards a .card p {
+}
+@media (max-width: 999px) and (max-width: 999px) {
+  .menu #equipe .cards a .card {
+    width: 50vw;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+  }
+  .menu #equipe .cards a .card p, .menu #equipe .cards a .card h4 {
+    background-color: black;
+  }
+}
+@media (max-width: 999px) {
+  .menu #equipe .cards a .card h4,
+.menu #equipe .cards a .card p {
     color: white;
   }
 }
@@ -244,12 +267,15 @@
 .menu #equipe .cards .card:hover #icon {
   color: rgb(255, 196, 0);
 }
-.menu #equipe .cards .card:hover p, .menu #equipe .cards .card:hover h4 {
+.menu #equipe .cards .card:hover p,
+.menu #equipe .cards .card:hover h4 {
   transition: color 0.5s ease-in-out;
   color: rgb(255, 196, 0);
 }
 .menu #equipe .buttons {
   margin-left: 100vh;
+  width: auto;
+  display: flex;
 }
 .menu #equipe .buttons button {
   margin: 0px 1vh;
@@ -318,7 +344,8 @@
 .menu #area .cards .card:hover #icon {
   color: rgb(255, 196, 0);
 }
-.menu #area .cards .card:hover p, .menu #area .cards .card:hover h4 {
+.menu #area .cards .card:hover p,
+.menu #area .cards .card:hover h4 {
   color: black;
 }
 .menu #area .buttons {

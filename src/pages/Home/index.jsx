@@ -73,8 +73,8 @@ return( //Começa a renderizar o HTML
       })}
     </div>
     <div className="buttons">
-    <button onClick={()=>setCarrossel2(carrossel2>0?0:carrossel2+(carrossel2<0?150:0))} style={carrossel2==0?{"backgroundColor":"gray "}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
-    <button onClick={()=>setCarrossel2(carrossel2-(carrossel2>-(bd.Advogados.length*150)?100:0))} style={carrossel2==-(bd.Advogados.length*100)?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
+    <button onClick={()=>setCarrossel2(carrossel2>0?0:carrossel2+(carrossel2<-400?1000:0))} style={carrossel2>-400?{"backgroundColor":"gray",cursor:"default"}:{"backgroundColor":""}}><AiOutlineArrowLeft /></button>
+    <button onClick={()=>setCarrossel2(carrossel2-(carrossel2>-(bd.Advogados.length*250)?1000:0))} style={carrossel2<-(bd.Advogados.length*150)?{"backgroundColor":"gray"}:{"backgroundColor":""}}><AiOutlineArrowRight/></button>
   </div>
   </div>
   <div id="area">

@@ -3,28 +3,35 @@
   margin: 0px;
   padding: 0px;
   .navbar{
+    display: grid;
+    grid-template-areas: "navbar" "buttons";
+    padding: 0px 10%;
+    grid-area: "navbar";
+    flex-grip:1vh;
     border-bottom: 1px solid black;
     max-width: 100%;
-    display: flex;
-    padding: 0.8vh 11vw;
+    grid-template-columns: auto auto ;
     justify-content: space-between;
-    
+    height: 15%;
     img{
-      width: 13vw;
-      height: 19vh;
+      max-width: 80%;
+      min-width: 30vh;
+      height: auto;
       border: none;
       
     }
     .buttons{
+      grid-area: "button";
       display: flex;
       flex-direction: column;
       .redes{
+        margin-bottom: -2vh;
         ul{
           margin-top: 1vh;
           display: flex;
           justify-content: end;
           list-style: none;
-          font-size: 2rem;
+          font-size: 30px;
           a{
             padding: 0px 0.2vw;
             color: black;
@@ -47,8 +54,8 @@
               font-weight: bold;
               text-decoration: none;
               &:hover{
+                color: $primary-color;
               transition: 0.3s ease-in-out;
-              text-decoration: underline;
               }
             }
           }
@@ -70,10 +77,10 @@
   @include Mobile{
     .navbar{
       img{
-        width: auto;
-        height: 80%;
+        width: 20vh;
+        
       }
-      height: 20vh;
+      height: auto;
       &::-webkit-scrollbar {display: none;}
       
       .mobile-menu{

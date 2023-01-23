@@ -1,115 +1,190 @@
 @import "../../variaveisGlobais.scss";
-.menu{
 
-background-color: black;
-padding: 0px;
-margin: 0px;
-color: white;
-max-width: 100vw;
-overflow: hidden;
-.Home{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("https://zamak.com.br/wp-content/uploads/2019/12/zamak-ti-advocacia.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+.menu {
+
+  background-color: black;
+  padding: 0px;
+  margin: 0px;
+  color: white;
   max-width: 100vw;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  h1{
-    @include Mobile{
-      font-size: 6vh;
-      background-position: center;
-      object-fit: cover;
-      background-size: cover;
+  overflow: hidden;
+
+  .Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://zamak.com.br/wp-content/uploads/2019/12/zamak-ti-advocacia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 5vh;
+      color: white;
+      font-size: 4rem;
+
+      span {
+        color: rgba(243, 243, 243, 0.107);
+        -webkit-text-stroke: 3px rgba(255, 255, 255, 0.696);
+        text-stroke: 3px rgba(255, 255, 255, 0.696);
+
+        //Mobile
+        @include Mobile {
+          font-size: 6vh;
+          background-position: center;
+          object-fit: cover;
+          background-size: cover;
+        }
+      }
     }
+
+    a {
+      color: rgba(0, 0, 0, 0.689);
+      font-weight: bold;
+      font-size: large;
+      text-decoration: none;
+      padding: 2vh 4vw;
+      background-color: $primary-color;
+      box-shadow: 1px 1px 14px -2px #000000;
+    }
+  }
+
+  #empresa {
+    height: 40vh;
+    padding: 5vh 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .titulo {
+      p {
+        color: $primary-color;
+        font-weight: bolder;
+        padding: 2% 0px;
+      }
+
+      h2 {
+        font-size: 3em;
+        font-weight: bolder;
+      }
+    }
+
+    .frase {
+      width: 40vw;
+      font-size: 1.3rem;
+      color: #c0c0c0;
+    }
+
+    //Mobile
+    @include Mobile {
+      display: block;
+      height: auto;
+      width: 100vw;
+      align-items: center;
+
+
+      .titulo {
+        margin-bottom: -2vh;
+
+        p {
+          font-size: 1.3rem;
+        }
+
+        h2 {}
+      }
+
+      .frase {
+        p {
+          width: 100%;
+        }
+
+      }
+    }
+  }
+
+  #equipe {
+    .cards {
+      width: 80vw;
+      justify-content: left;
+      #cardbody {
+
+        //Mobile
+        @include Mobile {
+          margin-left: 1.4vh;
+          margin-bottom: -1vh;
+          height: auto;
+
+          path {
+            display: none;
+          }
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    max-width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 5vh;
-    color: white;
-    font-size: 4rem;
-    span{
-     color: rgba(243, 243, 243, 0.107);
-     -webkit-text-stroke: 3px rgba(255, 255, 255, 0.696);
-     text-stroke: 3px rgba(255, 255, 255, 0.696);
-    }
-  }
-  a{
-    color: rgba(0, 0, 0, 0.689);
-    font-weight: bold;
-    font-size: large;
-    text-decoration: none;
-    padding: 2vh 4vw;
-    background-color: $primary-color;
-    box-shadow: 1px 1px 14px -2px #000000;
-  }
-  @include Mobile{
-  }
-}
-#empresa{
-  @include Mobile{
-    flex-direction: column;
-    height: 70vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: space-between;
-   
-    .titulo{
-      margin-bottom: -2vh;
-      p{
-        font-size: 1.3rem;
+    margin: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    overflow: hidden;
+    transform: translateX(0px);
+    position: relative;
+
+    #cardbody {
+      flex-direction: column;
+      width: 20vw;
+      height: 100vh;
+      margin-top: -3vh;
+      display: flex;
+      justify-content: end;
+      flex-direction: column;
+      margin-bottom: -1vh;
+      margin-right: 9vh;
+
+      @include Mobile {
+        width: auto;
       }
-      h2{
-      
-      }
-    }
-    .frase{
-      p{
-        width: 50vw;
-      }
-      
-    }
-  }
-  height: 40vh;
-  padding: 5vh 15vw;
-  display: flex;
-  align-items:center;
-  justify-content: space-between;
-  .titulo{
-    p{
-      color: $primary-color;
-      font-weight: bolder;
-      padding: 2% 0px;
-    }
-    h2{
-      font-size: 3em;
-      font-weight: bolder;
-    }
-  }
-  .frase{
-    width: 40vw;
-    font-size: 1.3rem;
-    color: #c0c0c0;
-  }
-}
-#equipe{
-  .cards{
-   
-    #cardbody{
-      @include Mobile{
-        margin-left: 1.4vh;
-       margin-bottom: -1vh;
-        height:auto;
-        path{
-          display: none;
+
+      &:hover {
+        .cards {
+          display: flex;
+          background-color: black;
+          border-left: 3px solid $primary-color;
         }
       }
-        
-      .cards{
-        @include Mobile{
+
+      .cards {
+        position: relative;
+        p {
+          color: #a3a3a3;
+          text-align: left;
+          padding-left: 8vh;
+        }
+        h4 {
+          padding-left: 8vh;
+          color: white;
+        }
+
+        flex-direction: column;
+        margin-bottom: -0.4vh;
+        display: none;
+        left: 30px;
+        width: 100%;
+        height: 15vh;
+        //Modile
+        @include Mobile {
           align-items: flex-start;
           display: flex;
           background-color: rgba(3, 3, 3, 0.669);
@@ -120,494 +195,521 @@ overflow: hidden;
           padding-left: 0px;
           overflow: hidden;
           height: 12vh;
-          h4{
+
+          h4 {
             color: $primary-color;
           }
-          p{
+
+          p {
             color: white;
           }
-      }
-      }
-      
-    }
-  }
-  a{
-    text-decoration: none;
-  }
-  max-width: 70vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  overflow: hidden;
-  transform: translateX(0px);
-  
-  #cardbody{
-    flex-direction: column;
-    width: 20vw;
-    height: 100vh;
-    margin-top: -3vh;
-    display: flex;
-    justify-content: end;
-    flex-direction: column;
-    margin-bottom: -1vh;
-    margin-right: 9vh;
-    @include Mobile{
-      width: auto;
-    }
-    
-    
-    &:hover{
-     
-      .cards{
-        
-        display: flex;
-        background-color: black;
-        border-left: 3px solid $primary-color;
-        
-      }
-    }
-    .cards{
-      justify-content: center;
-      position: relative;
-      
-      p{
-        color: #a3a3a3;
-        text-align: left;
-        padding-left: 8vh;
-      }
-      h4{
-        padding-left: 8vh;
-        color: white;
-      }
-      flex-direction: column;
-      margin-bottom: -0.4vh;
-      display: none;
-      width: 18vw;
-      height: 15vh;
-    }
-    
-  }
-  p{
-    margin-top: -12px;
-    text-align: center;
-    color:$primary-color;
-  }
-  p:nth-child(1){
-    font-size: 1.6rem;
-    margin-bottom: -2vh;
-  }
-  h2{
-    text-align: center;
-    font-size: 3em;
-  }
-  .cards{
-  margin: 10vh 0px 10vh auto;
-  display: flex;
-  justify-content: start;
-  @include Mobile{
-    padding: 1vh 0px;
-    flex-direction: column;
-    border: 1px solid $primary-color;
-    overflow-y: scroll;
-    margin-left: 10vh;
-    width: 100vw;
-    height: 70vh;
-    justify-content: space-between;
-    align-items: center;
-    a{
-      .card{
-        margin-top: 2vh;
-        height: 40vh;
-        width: 50vw;
-        
-       h4,p{
-         color: white;
-       }
-       
-     }
-    }
-    
-  }
-  
-    .card{
-      padding: 3vh 5vh 1vh 5vh;
-      margin-right: 5vh;
-      background-color: $background-gray;
-      width: 20vw;
-      height: 50vh;
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      background-position: center;
-      object-fit: cover;
-      background-size: cover;
-      
-      h4{
-        transition: 0.5s ease-in-out;
-        text-align:left;
-        color: transparent;
-       
-      }
-      p{
-        transition: 0.5s ease-in-out;
-        text-align: center;
-        color: transparent;
-        padding-top: 1vh;
-      }
-      #icon{
-        color:white;
-        font-size: 4em;
-        background-image: none;
-        margin-bottom: 1vh;
-        
-      }
-      
-      &:hover{
-        
-        #icon{
-          color:$primary-color;
-        }
-        p,h4{
-        transition: color 0.5s ease-in-out;
-          color:$primary-color;
         }
       }
+
     }
-   
-  }
-  .buttons{
-    margin-left: 100vh;
-    button{
-      margin: 0px 1vh;
-      background-color: $primary-color;
-      padding: 2vh 2vh;
-      font-size: 1.2em;
-      color: white;
-      transition: background-color 0.4s ease-in-out;
-      &:hover{
-        background-color: $primary-color;
-      }
-     }
-  }
-  
-}
-#area{
-  max-width: 70vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  overflow: hidden;
-  transition: 1s ease-in-out;
-  transform: translateX(0px);
-  p{
-    text-align: center;
-    color:$primary-color;
-  }
-  h2{
-    text-align: center;
-    font-size: 3em;
-  }
-  .cards{
-  margin: 10vh 0px 10vh auto;
-  display: flex;
-  justify-content: start;
-  
-    .card{
-      padding: 3vh 5vh 1vh 5vh;
-      margin-right: 5vh;
-      background-color: $background-gray;
-      width: 15vw;
-      height: 50vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      h4{
-        text-align: center;
-       
-      }
-      p{
-        text-align: center;
-        color: white;
-        padding-top: 1vh;
-      }
-      #icon{
-        color:white;
-        font-size: 4em;
-        background-image: none;
-        margin-bottom: 1vh;
-        
-      }
-      transition: 0.5s ease-in-out;
-      &:hover{
-        background: white;
-        #icon{
-          color:$primary-color ;
-        }
-        p,h4{
-          color: black;
-        }
-      }
+
+    p {
+      margin-top: -12px;
+      text-align: center;
+      color: $primary-color;
     }
-   
-  }
-  .buttons{
-    margin-left: 100vh;
-    button{
-      margin: 0px 1vh;
-      background-color: $primary-color;
-      padding: 2vh 2vh;
-      font-size: 1.2em;
-      color: white;
-      transition: background-color 0.4s ease-in-out;
-      &:hover{
-        background-color: $primary-color;
-      }
-     }
-     
-  }
-  @include Mobile{
-    .cards{
-      margin-left: 0vh;
-      align-items: center;
-     height: 50vh;
-     overflow-y: scroll;
-      width: 100vw;
-      flex-direction: column;
-      justify-content: space-between;
-      border-top: 1px solid $primary-color;
-      border-bottom: 1px solid $primary-color;
-      .card{
-      
-        width: 40vh;
-        margin: 1vh 0px;
-      }
+
+    p:nth-child(1) {
+      font-size: 1.6rem;
+      margin-bottom: -2vh;
     }
-  }
-}
-.diferenciais{
-  flex-direction: column;
-  display: flex;
-  padding: 2vh 15vw 0px;
-  max-width: 100vw;
-  height: 100vh;
-  background:$primary-color ;
-  @include Mobile{
-    height: auto;
-    padding-bottom: 10vh;
-    #head{
-      flex-direction: column;
-    }
-    .cards{
-      height: auto;
-      flex-direction: column;
-      margin-right: 0px;
-      padding: 5vh 0px;
-      border-top: 1px solid white;
-      border-bottom: 1px solid white;
-      align-items: center;
-      
-      &::-webkit-scrollbar {
-        width: 0;
-      }
-      .card{
-        position: relative;
-        height: auto;
-        padding-left: 10vh;
-        margin: 2vh 0vh;
-        #frase{
-          width: 40vw;
-        }
-      }
-      
-    }
-  }
-  #head{
-  padding: 5vh 0px 10vh;
-  display: flex;
-  justify-content: space-between;
-  .titulo{
-    p{
-      color: white;
-      font-weight: bolder;
-    }
-    h2{
-      color: black;
+
+    h2 {
+      text-align: center;
       font-size: 3em;
-      font-weight: bolder;
     }
-  }
-  .frase{
-    width: 40vw;
-    font-size: 1.2rem;
-    color: black;
-  }
-}
-  .cards{
-    .card{
-      background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
-      margin-right: 3vh;
-      background-color: $background-gray;
-      width: 50vw;
-      color: white;
+
+    .cards {
+      margin: 10vh 0px 10vh auto;
       display: flex;
-      flex-direction: column;
-      padding: 4vh 2vh 10vh;
-      justify-content: space-between;
-      background-repeat: no-repeat;
-      background-size: cover;
-      object-fit: contain;
-      background-position: right,top;
-      img{
-        min-width: 12vh;
-        max-width: 13vh;
-        margin-left: 8vh;
+      justify-content: start;
+      @include Mobile {
+        transform: translateX(0);
+        padding: 1vh 0px;
+        flex-direction: column;
+        border: 1px solid $primary-color;
+        overflow-y: scroll;
+        margin-left: 10vh;
+        width: 100vw;
+        height: 70vh;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          .card {
+            background-clip: border-box;
+            object-fit: cover;
+            background-position: right;
+            margin-top: 2vh;
+            height: 50vh;
+            width: 100vw;
+            @include Mobile{
+              width: 50vw;
+              height: 50vh;
+              
+              background-repeat: no-repeat;
+              background-clip: border-box;
+              p,h4{
+                background-color: black;
+                
+              }
+            }
+
+            h4,
+            p {
+              color: white;
+            }
+
+          }
+        }
+
       }
-      h5{
-        font-weight: bold;
-        font-size: 1.2em;
-        color: $primary-color;
-        
-      }
-      p{
-        width: 10vw;
-      }
-      transition: 0.5s ease-in-out;
-      &:hover{
-        transform: scale(1.1);
+
+      .card {
+        padding: 3vh 5vh 1vh 5vh;
+        margin-right: 5vh;
+        background-color: $background-gray;
+        width: 20vw;
+        height: 50vh;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-position: center;
+        object-fit: cover;
+        background-size: cover;
        
+
+        h4 {
+          transition: 0.5s ease-in-out;
+          text-align: left;
+          color: transparent;
+
+        }
+
+        p {
+          transition: 0.5s ease-in-out;
+          text-align: center;
+          color: transparent;
+          padding-top: 1vh;
+        }
+
+        #icon {
+          color: white;
+          font-size: 4em;
+          background-image: none;
+          margin-bottom: 1vh;
+
+        }
+
+        &:hover {
+
+          #icon {
+            color: $primary-color;
+          }
+
+          p,
+          h4 {
+            transition: color 0.5s ease-in-out;
+            color: $primary-color;
+          }
+        }
+      }
+
+    }
+
+    .buttons {
+      margin-left: 100vh;
+      width: auto;
+      display: flex;
+      button {
+       
+        margin: 0px 1vh;
+        background-color: $primary-color;
+        padding: 2vh 2vh;
+        font-size: 1.2em;
+        color: white;
+        transition: background-color 0.4s ease-in-out;
+
+        &:hover {
+          background-color: $primary-color;
+        }
       }
     }
-    display: flex;
+
   }
-  
-}
-#blog{
+
+  #area {
+    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform: translateX(0px);
+
+    p {
+      text-align: center;
+      color: $primary-color;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 3em;
+    }
+
+    .cards {
+      margin: 10vh 0px 10vh auto;
+      display: flex;
+      justify-content: start;
+
+      .card {
+        padding: 3vh 5vh 1vh 5vh;
+        margin-right: 5vh;
+        background-color: $background-gray;
+        width: 15vw;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+          text-align: center;
+
+        }
+
+        p {
+          text-align: center;
+          color: white;
+          padding-top: 1vh;
+        }
+
+        #icon {
+          color: white;
+          font-size: 4em;
+          background-image: none;
+          margin-bottom: 1vh;
+
+        }
+
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          background: white;
+
+          #icon {
+            color: $primary-color;
+          }
+
+          p,
+          h4 {
+            color: black;
+          }
+        }
+      }
+
+    }
+
+    .buttons {
+      margin-left: 100vh;
+
+      button {
+        margin: 0px 1vh;
+        background-color: $primary-color;
+        padding: 2vh 2vh;
+        font-size: 1.2em;
+        color: white;
+        transition: background-color 0.4s ease-in-out;
+
+        &:hover {
+          background-color: $primary-color;
+        }
+      }
+
+    }
+
+    @include Mobile {
+      .cards {
+        margin-left: 0vh;
+        align-items: center;
+        height: 50vh;
+        overflow-y: scroll;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: space-between;
+        border-top: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+
+        .card {
+
+          width: 40vh;
+          margin: 1vh 0px;
+        }
+      }
+    }
+  }
+
+  .diferenciais {
+    flex-direction: column;
+    display: flex;
+    padding: 2vh 15vw 0px;
+    max-width: 100vw;
+    height: 100vh;
+    background: $primary-color;
+
+    @include Mobile {
+      height: auto;
+      padding-bottom: 10vh;
+
+      #head {
+        flex-direction: column;
+      }
+
+      .cards {
+        height: auto;
+        flex-direction: column;
+        margin-right: 0px;
+        padding: 5vh 0px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        align-items: center;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+
+        .card {
+          position: relative;
+          height: auto;
+          padding-left: 10vh;
+          margin: 2vh 0vh;
+
+          #frase {
+            width: 40vw;
+          }
+        }
+
+      }
+    }
+
+    #head {
+      padding: 5vh 0px 10vh;
+      display: flex;
+      justify-content: space-between;
+
+      .titulo {
+        p {
+          color: white;
+          font-weight: bolder;
+        }
+
+        h2 {
+          color: black;
+          font-size: 3em;
+          font-weight: bolder;
+        }
+      }
+
+      .frase {
+        width: 40vw;
+        font-size: 1.2rem;
+        color: black;
+      }
+    }
+
+    .cards {
+      .card {
+        background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+        margin-right: 3vh;
+        background-color: $background-gray;
+        width: 50vw;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 4vh 2vh 10vh;
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: contain;
+        background-position: right, top;
+
+        img {
+          min-width: 12vh;
+          max-width: 13vh;
+          margin-left: 8vh;
+        }
+
+        h5 {
+          font-weight: bold;
+          font-size: 1.2em;
+          color: $primary-color;
+
+        }
+
+        p {
+          width: 10vw;
+        }
+
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+
+        }
+      }
+
+      display: flex;
+    }
+
+  }
+
+  #blog {
     display: flex;
     justify-content: space-between;
     padding: 10vh 10vw 5vh;
     flex-direction: column;
-    @include Mobile{
+
+    @include Mobile {
       width: 100vw;
       align-items: center;
-      p{
+
+      p {
         padding-bottom: -1vh;
       }
-      
-      .noticias{
+
+      .noticias {
         flex-direction: column;
-       
-        a{
-          .card{
+
+        a {
+          .card {
             width: 70vw;
           }
         }
-        
-      }
-    }
-  .titulo{
-    p{
-      color: rgb(255, 196, 0);
-      font-weight: bolder;
-      padding: 2% 0px;
-    }
-    h2{
-      font-size: 3em;
-      font-weight: bolder;
-    }
-  }
-  .frase{
-    width: 40vw;
-    font-size: 1.3rem;
-    color: #c0c0c0;
-  }
-  .noticias{
-    display: inline-block;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    transition: 0.3s ease-in-out;
-    .card{
-      margin: 5vh;
-      background-color: black;
-      width:20vw;
-      #data{
-        color:rgb(255, 196, 0);
-      }
-      p{
-        color: white;
-        padding-top: 2vh;
-      }
-    }
-  }
-  button{
-    width: 20vw;
-    margin:auto;
-    background-color:rgb(255, 196, 0) ;
-    color: white;
-    height: 5vh;
-  }
-}
-.contato{
-  background: $background-gray;
-  padding-top: 5vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: auto;
-  
-  h2{
-    font-size: 3em;
-    margin:0px 0px 3vh;
-  }
-  p{
-    color:$primary-color ;
-  }
-  .email{
-    @include Mobile{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-     
-    }
-    width: 70vw;
-    input{
-      @include Mobile{
-        width: 70vw;
-      }
-      width: 21vw;
-      height: 5vh;
-      background-color: #0c0c0c;
-      margin: 2vh;
-      padding: 2vh;
-      color: white;
-      border: none;
-      border-bottom:1px solid $primary-color  ;
-    }
-    #mensagem{
-      width: 68vw;
-      height: 20vh;
-      padding: 0px 0px 5vh 2vh;
 
+      }
     }
-    button{
-      background:$primary-color;
-      padding: 1vh 2vw;
-      margin-bottom: 20vh;
-      transition: 0.2s ease-in-out;
-      &:hover{
+
+    .titulo {
+      p {
+        color: rgb(255, 196, 0);
+        font-weight: bolder;
+        padding: 2% 0px;
+      }
+
+      h2 {
+        font-size: 3em;
+        font-weight: bolder;
+      }
+    }
+
+    .frase {
+      width: 40vw;
+      font-size: 1.3rem;
+      color: #c0c0c0;
+    }
+
+    .noticias {
+      display: inline-block;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      transition: 0.3s ease-in-out;
+
+      .card {
+        margin: 5vh;
+        background-color: black;
+        width: 20vw;
+
+        #data {
+          color: rgb(255, 196, 0);
+        }
+
+        p {
+          color: white;
+          padding-top: 2vh;
+        }
+      }
+    }
+
+    button {
+      width: 20vw;
+      margin: auto;
+      background-color: rgb(255, 196, 0);
+      color: white;
+      height: 5vh;
+    }
+  }
+
+  .contato {
+    background: $background-gray;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+
+    h2 {
+      font-size: 3em;
+      margin: 0px 0px 3vh;
+    }
+
+    p {
+      color: $primary-color;
+    }
+
+    .email {
+      @include Mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      width: 70vw;
+
+      input {
+        @include Mobile {
+          width: 70vw;
+        }
+
+        width: 21vw;
+        height: 5vh;
+        background-color: #0c0c0c;
+        margin: 2vh;
+        padding: 2vh;
         color: white;
+        border: none;
+        border-bottom:1px solid $primary-color;
+      }
+
+      #mensagem {
+        width: 68vw;
+        height: 20vh;
+        padding: 0px 0px 5vh 2vh;
+
+      }
+
+      button {
+        background: $primary-color;
+        padding: 1vh 2vw;
+        margin-bottom: 20vh;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          color: white;
+        }
       }
     }
   }
-}
 }
