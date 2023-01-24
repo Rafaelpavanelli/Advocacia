@@ -62,37 +62,40 @@ main {
   }
 }
 main img {
-  width: 26vw;
-  height: 65vh;
+  width: 30vw;
+  height: 60vh;
   border: 1px solid white;
 }
 @media (max-width: 999px) {
   main img {
-    width: 70vw;
-    height: 50vh;
+    width: 60vw;
+    height: auto;
     margin-bottom: 2vh;
   }
 }
 main .description {
   border: 1px solid white;
-  padding: 7vh;
+  padding: 3vh 2vh;
+  margin: 0vh 2vh;
   width: 35vw;
   color: white;
   height: 80vh;
   display: flex;
   flex-direction: column;
 }
+main .description p {
+  font-size: 90%;
+}
 @media (max-width: 999px) {
   main .description {
     height: auto;
-    width: 70vw;
+    width: 60vw;
   }
 }
 main .description h2 {
   color: rgb(255, 196, 0);
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: -1vh;
 }
 main .description p:nth-child(2) {
   color: rgb(101, 101, 101);
@@ -111,6 +114,7 @@ main .contato {
     height: auto;
     width: 60vw;
     margin-top: 1vh;
+    display: block;
   }
 }
 main .contato h2 {

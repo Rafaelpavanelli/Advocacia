@@ -231,35 +231,37 @@
     .cards {
       margin: 10vh 0px 10vh auto;
       display: flex;
-     
+      background-size: cover;
       @include Mobile {
-        
+        background-size: contain;
         padding: 1vh 0px;
         flex-direction: column;
         overflow-x: hidden;
         border: 1px solid $primary-color;
         overflow-y: scroll;
         margin-left: 10vh;
+        width: auto;
         &::-webkit-scrollbar{
           width: 0px;
         }
+        object-fit: contain;
         width: auto;
         height: 70vh;
         justify-content: space-between;
+        background-position: right top;
+        background-size: contain;
         border: none;
-        background-clip: border-box;
+        
         background-position: center right;
         align-items: center;
-       
         a {
           .card {
             overflow: hidden;
             margin-top: 2vh;
             height: 60vh;
             background-size: contain;
-            
             background-repeat: none;
-            width: 50vw;
+            width: auto;
             
             .cards{
               width: 100vw;

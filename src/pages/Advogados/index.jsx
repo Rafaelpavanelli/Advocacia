@@ -25,8 +25,8 @@ const dados=Perfil[0]
         <div className="contato">
           <h2>Entrar em contato</h2>
           <p>Contate-me</p>
-          <span><p><BsFillTelephoneFill style={{color:"rgb(255, 196, 0)" }}/>{dados.Contato.Telefone}</p></span>
-          <span><p><HiMail style={{color:"rgb(255, 196, 0)" }}/> {dados.Contato.Email}</p></span>
+          <span><p><BsFillTelephoneFill style={{color:"rgb(255, 196, 0)" }}/>  {dados.Contato.Telefone}</p></span>
+          <span><p><HiMail style={{color:"rgb(255, 196, 0)" }}/>   {dados.Contato.Email}</p></span>
           
 
         </div>

@@ -196,9 +196,11 @@
 .menu #equipe .cards {
   margin: 10vh 0px 10vh auto;
   display: flex;
+  background-size: cover;
 }
 @media (max-width: 999px) {
   .menu #equipe .cards {
+    background-size: contain;
     padding: 1vh 0px;
     flex-direction: column;
     overflow-x: hidden;
@@ -206,10 +208,14 @@
     overflow-y: scroll;
     margin-left: 10vh;
     width: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: auto;
     height: 70vh;
     justify-content: space-between;
+    background-position: right top;
+    background-size: contain;
     border: none;
-    background-clip: border-box;
     background-position: center right;
     align-items: center;
   }
@@ -222,7 +228,7 @@
     height: 60vh;
     background-size: contain;
     background-repeat: none;
-    width: 50vw;
+    width: auto;
   }
   .menu #equipe .cards a .card .cards {
     width: 100vw;

@@ -56,7 +56,7 @@ return( //Começa a renderizar o HTML
           <>
           <NavLink to={`/advogados/${dados.id}`} >
             
-             <div className="card" style={{"backgroundImage": `url(${dados.Perfil})`,backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundColor:"transparent"}}>
+             <div className="card" style={{"backgroundImage": `url(${dados.Perfil})`,backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundColor:"transparent"}}>
               <div id='cardbody'>
               <div className="cards" >
              

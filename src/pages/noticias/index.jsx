@@ -19,7 +19,7 @@ const dados=Post[0]
         <div className="noticia">
       <img src={dados.Background} alt="" />
       <h2>{dados.Titulo}</h2>
-      <h5><BsCalendar3 style={{color:" rgb(255, 196, 0)"}}/>{dados.Data}</h5>
+      <h5><BsCalendar3 style={{color:" rgb(255, 196, 0)"}}/> {dados.Data}</h5>
       <p>{dados.Materia}</p>
       </div>
     </div>
